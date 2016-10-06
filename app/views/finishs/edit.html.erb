@@ -1,0 +1,97 @@
+<div>
+  <div>
+    <%= form_tag("/finishs", method: :post) do %>
+      <h3>
+        登録する
+      </h3>
+      <input value="<%= @finish.member_id %>" type="text" name="member_id">
+      <input value="<%= @finish.sagyosyo_id %>" type="text" name="sagyosyo_id">
+      <input value="<%= @finish.syohin_id %>" type="text" name="product_id">
+      <input type="radio" name="shop" value="<%= @finish.shop %>">MG
+      <input type="radio" name="shop" value="<%= @finish.shop %>">YM
+      <input type="radio" name="shop" value="<%= @finish.shop %>">AY
+      <input type="radio" name="shop" value="<%= @finish.shop %>">AD
+      <input type="radio" name="shop" value="<%= @finish.shop %>">YMW
+      <input type="radio" name="shop" value="<%= @finish.shop %>">LJH
+      <input type="radio" name="shop" value="<%= @finish.shop %>">結婚相談室関連
+      <input type="radio" name="shop" value="<%= @finish.shop %>">その他
+      <input value="<%= @finish.shop %>" type="text" name="shop">
+      <input value="<%= @finish.name %>" type="text" name="name">
+      <input value="<%= @finish.name_rubi %>" type="text" name="name_rubi">
+      <input value="<%= @finish.tel %>" type="text" name="tel">
+      <input value="<%= @finish.email %>" type="text" name="email">
+      <input value="<%= @finish.post_no %>" type="text" name="post_no">
+      <input value="<%= @finish.prefectures %>" type="text" name="prefectures">
+      <input value="<%= @finish.adress1 %>" type="text" name="adress1">
+      <input value="<%= @finish.adress2 %>" type="text" name="adress2">
+      <textarea value="<%= @finish.free_space1 %>" type="text" name="free_space1" cols="30" rows="10"></textarea>
+      <input value="<%= @finish.first_day %>" type="text" name="first_day">
+      <input value="<%= @finish.delivery_schedule %>" type="text" name="delivery_schedule">
+      <input value="<%= @finish.delivery_string %>" type="text" name="delivery_string">
+      <input value="<%= @finish.sub_shop_delivery_string %>" type="text" name="sub_shop_delivery_string">
+      <input value="<%= @finish.main_shop_delivery_string %>" type="text" name="main_shop_delivery_string">
+      <input value="<%= @finish.re_product_sub_shop_delivery_string %>" type="text" name="re_product_sub_shop_delivery_string">
+      <input value="<%= @finish.re_product_main_shop_delivery_string %>" type="text" name="re_product_main_shop_delivery_string">
+      <input value="<%= @finish.matsuya_tsuuban %>" type="text" name="matsuya_tsuuban">
+      <input value="<%= @finish.special_topics %>" type="text" name="special_topics">
+      <input value="<%= @finish.product_place1 %>" type="text" name="product_place1">
+      <input value="<%= @finish.product_reason1 %>" type="text" name="product_reason1">
+      <input value="<%= @finish.product_first_day1 %>" type="text" name="product_first_day1">
+      <input value="<%= @finish.product_delivery_schedule1 %>" type="text" name="product_delivery_schedule1">
+      <input value="<%= @finish.product_delivery_day1 %>" type="text" name="product_delivery_day1">
+      <input value="<%= @finish.product_place2 %>" type="text" name="product_place2">
+      <input value="<%= @finish.product_reason2 %>" type="text" name="product_reason2">
+      <input value="<%= @finish.product_first_day2 %>" type="text" name="product_first_day2">
+      <input value="<%= @finish.product_delivery_schedule2 %>" type="text" name="product_delivery_schedule2">
+      <input value="<%= @finish.product_delivery_day2 %>" type="text" name="product_delivery_day2">
+      <input value="<%= @finish.product_place3 %>" type="text" name="product_place3">
+      <input value="<%= @finish.product_reason3 %>" type="text" name="product_reason3">
+      <input value="<%= @finish.product_first_day3 %>" type="text" name="product_first_day3">
+      <input value="<%= @finish.product_delivery_schedule3 %>" type="text" name="product_delivery_schedule3">
+      <input value="<%= @finish.product_delivery_day3 %>" type="text" name="product_delivery_day3">
+      <input value="<%= @finish.product_place4 %>" type="text" name="product_place4">
+      <input value="<%= @finish.product_reason4 %>" type="text" name="product_reason4">
+      <input value="<%= @finish.product_first_day4 %>" type="text" name="product_first_day4">
+      <input value="<%= @finish.product_delivery_schedule4 %>" type="text" name="product_delivery_schedule4">
+      <input value="<%= @finish.product_delivery_day4 %>" type="text" name="product_delivery_day4">
+      <input value="<%= @finish.product_delivery_day4 %>" type="text" name="product_delivery_day4">
+      <input value="<%= @finish.luggage_goods %>" type="text" name="luggage_goods">
+      <input value="<%= @finish.product_name %>" type="text" name="product_name">
+      <input value="<%= @finish.design_no %>" type="text" name="design_no">
+      <input value="<%= @finish.product_category %>" type="text" name="product_category">
+      <input value="<%= @finish.product_kind %>" type="text" name="product_kind">
+      <input value="<%= @finish.shitadori %>" type="text" name="shitadori">
+      <input value="<%= @finish.uchikin %>" type="text" name="uchikin">
+      <input value="<%= @finish.price %>" type="text" name="price">
+      <textarea value="<%= @finish.free_space2 %>" type="text" name="free_space2" cols="30" rows="10"></textarea>
+      <input value="<%= @finish.pay_string %>" type="text" name="pay_string">
+      <input value="<%= @finish.uchikin_pay_string %>" type="text" name="uchikin_pay_string">
+      <input value="<%= @finish.staff_id %>" type="text" name="staff_id">
+      <input value="<%= @finish.customer_name %>" type="text" name="customer_name">
+      <input value="<%= @finish.customer_adress %>" type="text" name="customer_adress">
+      <input value="<%= @finish.customer_telephone %>" type="text" name="customer_telephone">
+      <input type="radio" name="customer_telephone" value="<%= @finish.next_expected %>">次回の期待ができる方
+      <textarea value="<%= @finish.visit_reason %>" type="text" name="visit_reason" cols="30" rows="10"></textarea>
+      <input value="<%= @finish.search_keywords %>" type="text" name="search_keywords">
+      <input value="<%= @finish.show_string_hp %>" type="text" name="show_string_hp">
+      <input value="<%= @finish.browser %>" type="text" name="browser">
+      <input value="<%= @finish.terminal_kind %>" type="text" name="terminal_kind">
+      <input value="<%= @finish.hp_impression %>" type="text" name="hp_impression">
+      <input value="<%= @finish.sample_price %>" type="text" name="sample_price">
+      <input value="<%= @finish.sample_design %>" type="text" name="sample_design">
+      <input value="<%= @finish.reason_of_yumejitate %>" type="text" name="reason_of_yumejitate">
+      <input value="<%= @finish.bad_impression_hp %>" type="text" name="bad_impression_hp">
+      <input value="<%= @finish.want_jewelry %>" type="text" name="want_jewelry">
+      <input value="<%= @finish.publish_true %>" type="text" name="publish_true">
+      <input value="<%= @finish.contact_true %>" type="text" name="contact_true">
+      <input value="<%= @finish.customer_email %>" type="text" name="customer_email">
+      <input value="<%= @finish.sex %>" type="text" name="sex">
+      <input value="<%= @finish.age %>" type="text" name="age">
+      
+      <input type="submit" value="SENT">
+
+    <% end %>
+
+
+  </div>
+</div>

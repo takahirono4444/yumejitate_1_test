@@ -1,0 +1,74 @@
+<div class="product_find_form"> 
+  <div class="product_find_form">
+  <%= form_tag("/products/find", method: :get) do %>
+                <p>
+                受注日検索　　　　　　　　　：
+                <input placeholder="0000-00-00と入力" type="text" name="first_day_from">〜
+                <input placeholder="0000-00-00と入力" type="text" name="first_day_to">
+                <input type="submit" value="日付検索">
+              </p>
+              <% end %>
+              <%= form_tag("/products/find", method: :get) do %>
+              <p>
+                入金日検索　　　　　　　　　：
+      <input placeholder="0000-00-00と入力" type="text" name="pay_string_from">〜
+      <input placeholder="0000-00-00と入力" type="text" name="pay_string_to">
+           <input type="submit" value="日付検索">
+    </p>
+    <% end %>
+    <%= form_tag("/products/find", method: :get) do %>
+    <p>
+
+                納品日検索　　　　　　　　　：
+      <input placeholder="0000-00-00と入力" type="text" name="delivery_string_from">〜
+      <input placeholder="0000-00-00と入力" type="text" name="delivery_string_to">
+           <input type="submit" value="日付検索">
+    </p>
+    <% end %>
+    <%= form_tag("/products/find", method: :get) do %>
+    <p>
+    
+                納品予定日検索　　　　　　　：
+                <input placeholder="0000-00-00と入力" type="text" name="delivery_schedule_from">〜
+                <input placeholder="0000-00-00と入力" type="text" name="delivery_schedule_to">
+                     <input type="submit" value="日付検索">
+              </p>
+              <% end %>
+              <%= form_tag("/products/find", method: :get) do %>
+              <p>
+                加工先1ライム到着予定日検索：
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule1_from">〜
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule1_to">
+          <input type="submit" value="日付検索">
+     </p>
+     <% end %>
+     <%= form_tag("/products/find", method: :get) do %>
+     <p>
+                加工先2ライム到着予定日検索：
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule2_from">〜
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule2_to">
+          <input type="submit" value="日付検索">
+          </p>
+          <% end %>
+          <%= form_tag("/products/find", method: :get) do %>
+     <p>
+                加工先3ライム到着予定日検索：
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule3_from">〜
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule3_to">
+          <input type="submit" value="日付検索">
+          </p>
+          <% end %>
+          <%= form_tag("/products/find", method: :get) do %>
+     <p>
+                加工先4ライム到着予定日検索：
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule4_from">〜
+     <input placeholder="0000-00-00と入力" type="text" name="product_delivery_schedule4_to">
+          <input type="submit" value="日付検索">
+     </p>
+<% end %>
+
+
+   
+ 
+    </div>
+              

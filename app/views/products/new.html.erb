@@ -1,0 +1,98 @@
+<div>
+  <div>
+    <%= form_tag("/products", method: :post) do %>
+      <h3>
+        登録する
+      </h3>
+      <input placeholder="会員番号" type="text" name="member_id">
+      <input placeholder="作業書番号" type="text" name="sagyosyo_id">
+      <input placeholder="商品番号" type="text" name="syohin_id">
+      <input type="radio" name="shop" value="MG">MG
+      <input type="radio" name="shop" value="YM">YM
+      <input type="radio" name="shop" value="AY">AY
+      <input type="radio" name="shop" value="AD">AD
+      <input type="radio" name="shop" value="YMW">YMW
+      <input type="radio" name="shop" value="LJH">LJH
+      <input type="radio" name="shop" value="結婚相談室関連">結婚相談室関連
+      <input type="radio" name="shop" value="その他">その他
+      <input placeholder="その他の場所について記入" type="text" name="shop">
+      <input placeholder="名前" type="text" name="name">
+      <input placeholder="ふりがな" type="text" name="name_rubi">
+      <input placeholder="電話" type="text" name="tel">
+      <input placeholder="メール" type="text" name="email">
+      <input placeholder="〒" type="text" name="post_no">
+      <input placeholder="都道府県" type="text" name="prefectures">
+      <input placeholder="住所1" type="text" name="adress1">
+      <input placeholder="住所2" type="text" name="adress2">
+      <textarea placeholder="備考欄" type="text" name="free_space1" cols="30" rows="10"></textarea>
+      <input placeholder="受注日" type="text" name="first_day">
+      <input placeholder="納期" type="text" name="delivery_schedule">
+      <input placeholder="納品日" type="text" name="delivery_string">
+      <input placeholder="店舗→加工仕分け所" type="text" name="sub_shop_delivery_string">
+      <input placeholder="加工仕分け所→店舗" type="text" name="main_shop_delivery_string">
+      <input placeholder="店舗→加工仕分け所(再加工)" type="text" name="re_product_sub_shop_delivery_string">
+      <input placeholder="加工仕分け所→店舗(再加工)" type="text" name="re_product_main_shop_delivery_string">
+      <input placeholder="松屋通番" type="text" name="matsuya_tsuuban">
+      <input placeholder="特記事項" type="text" name="special_topics">
+      <input placeholder="加工所1" type="text" name="product_place1">
+      <input placeholder="加工内容1" type="text" name="product_reason1">
+      <input placeholder="出し日1" type="text" name="product_first_day1">
+      <input placeholder="ライム納期1" type="text" name="product_delivery_schedule1">
+      <input placeholder="ライム到着日1" type="text" name="product_delivery_day1">
+      <input placeholder="加工所2" type="text" name="product_place2">
+      <input placeholder="加工内容2" type="text" name="product_reason2">
+      <input placeholder="出し日2" type="text" name="product_first_day2">
+      <input placeholder="ライム納期2" type="text" name="product_delivery_schedule2">
+      <input placeholder="ライム到着日2" type="text" name="product_delivery_day2">
+      <input placeholder="加工所3" type="text" name="product_place3">
+      <input placeholder="加工内容3" type="text" name="product_reason3">
+      <input placeholder="出し日3" type="text" name="product_first_day3">
+      <input placeholder="ライム納期3" type="text" name="product_delivery_schedule3">
+      <input placeholder="ライム到着日3" type="text" name="product_delivery_day3">
+      <input placeholder="加工所4" type="text" name="product_place4">
+      <input placeholder="加工内容4" type="text" name="product_reason4">
+      <input placeholder="出し日4" type="text" name="product_first_day4">
+      <input placeholder="ライム納期4" type="text" name="product_delivery_schedule4">
+      <input placeholder="ライム到着日4" type="text" name="product_delivery_day4">
+      <input placeholder="ライム到着日4" type="text" name="product_delivery_day4">
+      <input placeholder="お預かり品" type="text" name="luggage_goods">
+      <input placeholder="受注商品名" type="text" name="product_name">
+      <input placeholder="デザインナンバー" type="text" name="design_no">
+      <input placeholder="受注分類" type="text" name="product_category">
+      <input placeholder="商品の種類" type="text" name="product_kind">
+      <input placeholder="下取り金額" type="text" name="shitadori">
+      <input placeholder="内金" type="text" name="uchikin">
+      <input placeholder="最終金額" type="text" name="price">
+      <textarea placeholder="備考欄2" type="text" name="free_space2" cols="30" rows="10"></textarea>
+      <input placeholder="入金日" type="text" name="pay_string">
+      <input placeholder="内金入金日" type="text" name="uchikin_pay_string">
+      <input placeholder="担当者名" type="text" name="staff_id">
+      <input placeholder="お客様名" type="text" name="customer_name">
+      <input placeholder="お客様住所" type="text" name="customer_adress">
+      <input placeholder="お客様ご連絡先" type="text" name="customer_telephone">
+      <input type="radio" name="customer_telephone" value="next_expected">次回の期待ができる方
+      <textarea placeholder="来店の理由" type="text" name="visit_reason" cols="30" rows="10"></textarea>
+      <input placeholder="検索キーワード" type="text" name="search_keywords">
+      <input placeholder="HPを見た日" type="text" name="show_string_hp">
+      <input placeholder="ブラウザ" type="text" name="browser">
+      <input placeholder="端末の種類" type="text" name="terminal_kind">
+      <input placeholder="HPの印象" type="text" name="hp_impression">
+      <input placeholder="サンプルの価格" type="text" name="sample_price">
+      <input placeholder="サンプルのデザイン" type="text" name="sample_design">
+      <input placeholder="夢仕立を選んだ理由" type="text" name="reason_of_yumejitate">
+      <input placeholder="HPの気になった点" type="text" name="bad_impression_hp">
+      <input placeholder="今後欲しいジュエリー" type="text" name="want_jewelry">
+      <input placeholder="掲載可" type="text" name="publish_true">
+      <input placeholder="メール可" type="text" name="contact_true">
+      <input placeholder="お客様のメールアドレス" type="text" name="customer_email">
+      <input placeholder="性別" type="text" name="sex">
+      <input placeholder="年代" type="text" name="age">
+      
+              <input type="file" name="image">
+      
+          
+      <input type="submit" value="SENT">
+
+    <% end %>
+  </div>
+</div>
