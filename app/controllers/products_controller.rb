@@ -12,12 +12,15 @@ class ProductsController < ApplicationController
 
   def find
     @product = Product.where(first_day: "#{params[:first_day_from]}".."#{params[:first_day_to]}")
+
   end
   def find2
 @product = Product.where(pay_string: "#{params[:pay_string_from]}".."#{params[:pay_string_to]}")
 end
 def find3
 @product = Product.where(delivery_string: "#{params[:delivery_string_from]}".."#{params[:delivery_string_to]}")
+
+
 end
 def find4
 @product = Product.where(delivery_schedule: "#{params[:delivery_schedule_from]}".."#{params[:delivery_schedule_to]}")
@@ -54,6 +57,12 @@ def create
     @picture = Picture.create(image_file_name: params[:image], product_id: @product.id)
     @finish = Finish.create(a_finish: params[:a_finish], product_id: @product.id)
     Product.where(member_id: params[:member_id]).first_or_initialize
+
+     if @product.save
+      redirect_to @product, notice: "新規登録をしました"
+    else
+      render :new
+    end
 
     
   
