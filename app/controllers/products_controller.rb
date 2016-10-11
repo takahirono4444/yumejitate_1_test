@@ -58,11 +58,7 @@ def create
     @finish = Finish.create(a_finish: params[:a_finish], product_id: @product.id)
     Product.where(member_id: params[:member_id]).first_or_initialize
 
-     if @product.save
-      redirect_to @product, notice: "新規登録をしました"
-    else
-      render :new
-    end
+     
 
     
   
