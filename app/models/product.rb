@@ -11,7 +11,7 @@ validates :first_day, :presence => true
 validates :shop, :presence =>true
 
 
-validate :add_error_sample
+# validate :add_error_sample
 
   # def add_error_sample
   # if member_id.brank?
