@@ -5,10 +5,10 @@ class Product < ActiveRecord::Base
  has_one :finish
 
 
-validates :member_id, :presence => true
-validates :name, :presence => true
-validates :first_day, :presence => true
-validates :shop, :presence =>true
+validates :member_id, presence: true
+validates :name, presence: true
+validates :first_day, presence: true
+validates :shop, presence: true
 
 
 # validate :add_error_sample
