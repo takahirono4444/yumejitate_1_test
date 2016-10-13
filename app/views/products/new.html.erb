@@ -1,98 +1,168 @@
 <div>
-  <div>
-    <%= form_tag("/products", method: :post) do %>
-      <h3>
+        <h3>
         登録する
       </h3>
-      <input placeholder="会員番号" type="text" name="member_id">
-      <input placeholder="作業書番号" type="text" name="sagyosyo_id">
-      <input placeholder="商品番号" type="text" name="syohin_id">
-      <input type="radio" name="shop" value="MG">MG
-      <input type="radio" name="shop" value="YM">YM
-      <input type="radio" name="shop" value="AY">AY
-      <input type="radio" name="shop" value="AD">AD
-      <input type="radio" name="shop" value="YMW">YMW
-      <input type="radio" name="shop" value="LJH">LJH
-      <input type="radio" name="shop" value="結婚相談室関連">結婚相談室関連
-      <input type="radio" name="shop" value="その他">その他
-      <input placeholder="その他の場所について記入" type="text" name="shop">
-      <input placeholder="名前" type="text" name="name">
-      <input placeholder="ふりがな" type="text" name="name_rubi">
-      <input placeholder="電話" type="text" name="tel">
-      <input placeholder="メール" type="text" name="email">
-      <input placeholder="〒" type="text" name="post_no">
-      <input placeholder="都道府県" type="text" name="prefectures">
-      <input placeholder="住所1" type="text" name="adress1">
-      <input placeholder="住所2" type="text" name="adress2">
-      <textarea placeholder="備考欄" type="text" name="free_space1" cols="30" rows="10"></textarea>
-      <input placeholder="受注日" type="text" name="first_day">
-      <input placeholder="納期" type="text" name="delivery_schedule">
-      <input placeholder="納品日" type="text" name="delivery_string">
-      <input placeholder="店舗→加工仕分け所" type="text" name="sub_shop_delivery_string">
-      <input placeholder="加工仕分け所→店舗" type="text" name="main_shop_delivery_string">
-      <input placeholder="店舗→加工仕分け所(再加工)" type="text" name="re_product_sub_shop_delivery_string">
-      <input placeholder="加工仕分け所→店舗(再加工)" type="text" name="re_product_main_shop_delivery_string">
-      <input placeholder="松屋通番" type="text" name="matsuya_tsuuban">
-      <input placeholder="特記事項" type="text" name="special_topics">
-      <input placeholder="加工所1" type="text" name="product_place1">
-      <input placeholder="加工内容1" type="text" name="product_reason1">
-      <input placeholder="出し日1" type="text" name="product_first_day1">
-      <input placeholder="ライム納期1" type="text" name="product_delivery_schedule1">
-      <input placeholder="ライム到着日1" type="text" name="product_delivery_day1">
-      <input placeholder="加工所2" type="text" name="product_place2">
-      <input placeholder="加工内容2" type="text" name="product_reason2">
-      <input placeholder="出し日2" type="text" name="product_first_day2">
-      <input placeholder="ライム納期2" type="text" name="product_delivery_schedule2">
-      <input placeholder="ライム到着日2" type="text" name="product_delivery_day2">
-      <input placeholder="加工所3" type="text" name="product_place3">
-      <input placeholder="加工内容3" type="text" name="product_reason3">
-      <input placeholder="出し日3" type="text" name="product_first_day3">
-      <input placeholder="ライム納期3" type="text" name="product_delivery_schedule3">
-      <input placeholder="ライム到着日3" type="text" name="product_delivery_day3">
-      <input placeholder="加工所4" type="text" name="product_place4">
-      <input placeholder="加工内容4" type="text" name="product_reason4">
-      <input placeholder="出し日4" type="text" name="product_first_day4">
-      <input placeholder="ライム納期4" type="text" name="product_delivery_schedule4">
-      <input placeholder="ライム到着日4" type="text" name="product_delivery_day4">
-      <input placeholder="ライム到着日4" type="text" name="product_delivery_day4">
-      <input placeholder="お預かり品" type="text" name="luggage_goods">
-      <input placeholder="受注商品名" type="text" name="product_name">
-      <input placeholder="デザインナンバー" type="text" name="design_no">
-      <input placeholder="受注分類" type="text" name="product_category">
-      <input placeholder="商品の種類" type="text" name="product_kind">
-      <input placeholder="下取り金額" type="text" name="shitadori">
-      <input placeholder="内金" type="text" name="uchikin">
-      <input placeholder="最終金額" type="text" name="price">
-      <textarea placeholder="備考欄2" type="text" name="free_space2" cols="30" rows="10"></textarea>
-      <input placeholder="入金日" type="text" name="pay_string">
-      <input placeholder="内金入金日" type="text" name="uchikin_pay_string">
-      <input placeholder="担当者名" type="text" name="staff_id">
-      <input placeholder="お客様名" type="text" name="customer_name">
-      <input placeholder="お客様住所" type="text" name="customer_adress">
-      <input placeholder="お客様ご連絡先" type="text" name="customer_telephone">
-      <input type="radio" name="customer_telephone" value="next_expected">次回の期待ができる方
-      <textarea placeholder="来店の理由" type="text" name="visit_reason" cols="30" rows="10"></textarea>
-      <input placeholder="検索キーワード" type="text" name="search_keywords">
-      <input placeholder="HPを見た日" type="text" name="show_string_hp">
-      <input placeholder="ブラウザ" type="text" name="browser">
-      <input placeholder="端末の種類" type="text" name="terminal_kind">
-      <input placeholder="HPの印象" type="text" name="hp_impression">
-      <input placeholder="サンプルの価格" type="text" name="sample_price">
-      <input placeholder="サンプルのデザイン" type="text" name="sample_design">
-      <input placeholder="夢仕立を選んだ理由" type="text" name="reason_of_yumejitate">
-      <input placeholder="HPの気になった点" type="text" name="bad_impression_hp">
-      <input placeholder="今後欲しいジュエリー" type="text" name="want_jewelry">
-      <input placeholder="掲載可" type="text" name="publish_true">
-      <input placeholder="メール可" type="text" name="contact_true">
-      <input placeholder="お客様のメールアドレス" type="text" name="customer_email">
-      <input placeholder="性別" type="text" name="sex">
-      <input placeholder="年代" type="text" name="age">
-      
-              <input type="file" name="image">
-      
-          
-      <input type="submit" value="SENT">
+      <%= form_for(@product) do |f| %>
+       
+      <%= f.label :会員番号 %>
+<%= f.text_field :member_id %>
+      <%= f.label :作業書番号 %>
+<%= f.text_field :sagyosyo_id %>
+      <%= f.label :商品番号 %>
+<%= f.text_field :syohin_id %>
+<%= f.label :受注場所 %>
+<%= f.text_field :shop %>
+      <%= f.label :名前 %>
+<%= f.text_field :name %>
+      <%= f.label :ふりがな %>
+<%= f.text_field :name_rubi %>
+      <%= f.label :電話 %>
+<%= f.text_field :tel %>
+      <%= f.label :メール %>
+<%= f.text_field :email %>
+      <%= f.label :〒 %>
+<%= f.text_field :post_no %>
+      <%= f.label :都道府県 %>
+<%= f.text_field :prefectures %>
+      <%= f.label :住所1 %>
+<%= f.text_area :adress1, size: "30x20" %>
+      <%= f.label :住所2 %>
+<%= f.text_area :adress2, size: "30x20" %>
+      <%= f.label :備考欄 %>
+<%= f.text_area :free_space1, size: "30x20" %>
+      <%= f.label :受注日 %>
+<%= f.text_field :first_day %>
+      <%= f.label :納期 %>
+<%= f.text_field :delivery_schedule %>
+      <%= f.label :納品日 %>
+<%= f.text_field :delivery_string %>
+      <%= f.label :店舗→加工仕分け所 %>
+<%= f.text_field :sub_shop_delivery_string %>
+      <%= f.label :加工仕分け所→店舗 %>
+<%= f.text_field :main_shop_delivery_string %>
+      <%= f.label :"店舗→加工仕分け所(再加工)" %>
+<%= f.text_field :re_product_sub_shop_delivery_string %>
+      <%= f.label :"加工仕分け所→店舗(再加工)" %>
+<%= f.text_field :re_product_main_shop_delivery_string %>
+      <%= f.label :松屋通番 %>
+<%= f.text_field :matsuya_tsuuban %>
+      <%= f.label :特記事項 %>
+<%= f.text_field :special_topics %>
+      <%= f.label :加工所1 %>
+<%= f.text_field :product_place1 %>
+      <%= f.label :加工内容1 %>
+<%= f.text_field :product_reason1 %>
+      <%= f.label :出し日1 %>
+<%= f.text_field :product_first_day1 %>
+      <%= f.label :ライム納期1 %>
+<%= f.text_field :product_delivery_schedule1 %>
+      <%= f.label :ライム到着日1 %>
+<%= f.text_field :product_delivery_day1 %>
+      <%= f.label :加工所2 %>
+<%= f.text_field :product_place2 %>
+      <%= f.label :加工内容2 %>
+<%= f.text_field :product_reason2 %>
+      <%= f.label :出し日2 %>
+<%= f.text_field :product_first_day2 %>
+      <%= f.label :ライム納期2 %>
+<%= f.text_field :product_delivery_schedule2 %>
+      <%= f.label :ライム到着日2 %>
+<%= f.text_field :product_delivery_day2 %>
+      <%= f.label :加工所3 %>
+<%= f.text_field :product_place3 %>
+      <%= f.label :加工内容3 %>
+<%= f.text_field :product_reason3 %>
+      <%= f.label :出し日3 %>
+<%= f.text_field :product_first_day3 %>
+      <%= f.label :ライム納期3 %>
+<%= f.text_field :product_delivery_schedule3 %>
+      <%= f.label :ライム到着日3 %>
+<%= f.text_field :product_delivery_day3 %>
+      <%= f.label :加工所4 %>
+<%= f.text_field :product_place4 %>
+      <%= f.label :加工内容4 %>
+<%= f.text_field :product_reason4 %>
+      <%= f.label :出し日4 %>
+<%= f.text_field :product_first_day4 %>
+      <%= f.label :ライム納期4 %>
+<%= f.text_field :product_delivery_schedule4 %>
+      <%= f.label :ライム到着日4 %>
+<%= f.text_field :product_delivery_day4 %>
+      <%= f.label :ライム到着日4 %>
+<%= f.text_field :product_delivery_day4 %>
+      <%= f.label :お預かり品 %>
+<%= f.text_field :luggage_goods %>
+      <%= f.label :受注商品名 %>
+<%= f.text_field :product_name %>
+      <%= f.label :デザインナンバー %>
+<%= f.text_field :design_no %>
+      <%= f.label :受注分類 %>
+<%= f.text_field :product_category %>
+      <%= f.label :商品の種類 %>
+<%= f.text_field :product_kind %>
+      <%= f.label :下取り金額 %>
+<%= f.text_field :shitadori %>
+      <%= f.label :内金 %>
+<%= f.text_field :uchikin %>
+      <%= f.label :最終金額 %>
+<%= f.text_field :price %>
+      <%=f.label :備考欄2 %>
+<%= f.text_area :free_space2, size: "30x20" %>
+      <%= f.label :入金日 %>
+<%= f.text_field :pay_string %>
+      <%= f.label :内金入金日 %>
+<%= f.text_field :uchikin_pay_string %>
+      <%= f.label :担当者名 %>
+<%= f.text_field :staff_id %>
+      <%= f.label :お客様名 %>
+<%= f.text_field :customer_name %>
+      <%= f.label :お客様住所 %>
+<%= f.text_area :customer_adress, size: "30x20" %>
+      <%= f.label :お客様ご連絡先 %>
+<%= f.text_field :customer_telephone %>
+<label><%= f.radio_button :next_expected, "1" %>次回の期待ができる方</label>
+      <%=f.label :来店の理由 %>
+<%= f.text_area :visit_reason, size: "30x20" %>
+      <%= f.label :検索キーワード %>
+<%= f.text_field :search_keywords %>
+      <%= f.label :HPを見た日 %>
+<%= f.text_field :show_string_hp %>
+      <%= f.label :ブラウザ %>
+<%= f.text_field :browser %>
+      <%= f.label :端末の種類 %>
+<%= f.text_field :terminal_kind %>
+      <%= f.label :HPの印象 %>
+<%= f.text_field :hp_impression %>
+      <%= f.label :サンプルの価格 %>
+<%= f.text_field :sample_price %>
+      <%= f.label :サンプルのデザイン %>
+<%= f.text_field :sample_design %>
+      <%= f.label :夢仕立を選んだ理由 %>
+<%= f.text_field :reason_of_yumejitate %>
+      <%= f.label :HPの気になった点 %>
+<%= f.text_field :bad_impression_hp %>
+      <%= f.label :今後欲しいジュエリー %>
+<%= f.text_field :want_jewelry %>
+      <%= f.label :掲載可 %>
+<%= f.text_field :publish_true %>
+      <%= f.label :メール可 %>
+<%= f.text_field :contact_true %>
+      <%= f.label :お客様のメールアドレス %>
+<%= f.text_field :customer_email %>
+      <%= f.label :性別 %>
+<%= f.text_field :sex %>
+      <%= f.label :年代 %>
+<%= f.text_field :age %>
+<%= f.label :お預かり画像 %>
+<%= f.file_field :photo %>
+
+
+      <%= f.submit %>
+
+
+
+     
+
 
     <% end %>
-  </div>
 </div>

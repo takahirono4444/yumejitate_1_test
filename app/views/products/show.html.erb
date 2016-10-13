@@ -4,7 +4,6 @@
 <table class="table_design">
 <tr>
 <th>編集/削除</th>
-<th>納品済み登録</th>
  <th>会員番号</th>
       <th>作業書番号</th>
       <th>商品番号</th>
@@ -79,7 +78,8 @@
       <th>お客様のメールアドレス</th>
       <th>性別</th>
       <th>年代</th>
-      <th>商品画像</th>
+      <th>お預かり画像</th>
+      <th>出来上がり画像</th>
     </tr>
  <tr>
  <td><ul class="more_list">
@@ -171,7 +171,7 @@
       <td><%= @product.sex %></td>
       <td><%= @product.age %></td>
       <% @pictures.each do |pic| %>
-      <td>      <%= image_tag pic.image_file_name  %>
+      <td>      <%= image_tag pic.photo %>
       </td>
       <% end %>
 

@@ -1,0 +1,173 @@
+<div>
+  <div>
+  <form enctype="multipart/form-data">
+    <%= form_tag("/products", method: :post) do %>
+      <h3>
+        登録する
+      </h3>
+      <div>会員番号(Member)※必須項目※半角入力</div>
+      <input placeholder="会員番号(Member)※必須" type="text" name="member_id">
+      <div>作業書番号※半角入力</div>
+      <input placeholder="作業書番号" type="text" name="sagyosyo_id">
+      <div>商品番号※半角入力</div>
+      <input placeholder="商品番号" type="text" name="syohin_id">
+      <div>受注場所(Shop)※必須</div>
+      <input type="radio" name="shop" value="MG">MG
+      <input type="radio" name="shop" value="YM">YM
+      <input type="radio" name="shop" value="AY">AY
+      <input type="radio" name="shop" value="AD">AD
+      <input type="radio" name="shop" value="YMW">YMW
+      <input type="radio" name="shop" value="LJH">LJH
+      <input type="radio" name="shop" value="結婚相談室関連">結婚相談室関連
+      <input type="radio" name="shop" value="その他">その他(備考欄に入力してください)
+      <div>お客様名(Name)※必須</div>
+      <input placeholder="名前" type="text" name="name">
+      <div>ふりがな</div>
+      <input placeholder="ふりがな" type="text" name="name_rubi">
+      <div>電話[03-0000-0000の様に入力すること※半角]</div>
+      <input placeholder="電話" type="text" name="tel">
+      <div>メール</div>
+      <input placeholder="メール" type="text" name="email">
+      <div>ポストナンバー</div>
+      <input placeholder="〒" type="text" name="post_no">
+      <div>都道府県</div>
+      <input placeholder="都道府県" type="text" name="prefectures">
+      <div>住所1</div>
+      <input placeholder="住所1" type="text" name="adress1">
+      <div>住所2</div>
+      <input placeholder="住所2" type="text" name="adress2">
+      <div>備考欄</div>
+      <textarea placeholder="備考欄" type="text" name="free_space1" cols="30" rows="10"></textarea>
+      <div>受注日(First_day)※必須[2000/01/01の様に入力すること※半角]</div>
+      <input placeholder="受注日" type="text" name="first_day">
+      <div>納期</div>
+      <input placeholder="納期" type="text" name="delivery_schedule">
+      <div>納品日[2000/01/01の様に入力すること※半角]</div>
+      <input placeholder="納品日" type="text" name="delivery_string">
+      <div>店舗→加工仕訳所</div>
+      <input placeholder="店舗→加工仕分け所" type="text" name="sub_shop_delivery_string">
+      <div>加工仕訳所→店舗</div>
+      <input placeholder="加工仕分け所→店舗" type="text" name="main_shop_delivery_string">
+      <div>店舗→加工仕訳所(再加工)</div>
+      <input placeholder="店舗→加工仕分け所(再加工)" type="text" name="re_product_sub_shop_delivery_string">
+      <div>加工仕訳所→店舗(再加工)
+      <input placeholder="加工仕分け所→店舗(再加工)" type="text" name="re_product_main_shop_delivery_string">
+      <div>松屋通番</div>
+      <input placeholder="松屋通番" type="text" name="matsuya_tsuuban">
+      <div>特記事項</div>
+      <input placeholder="特記事項" type="text" name="special_topics">
+      <div>加工所1</div>
+      <input placeholder="加工所1" type="text" name="product_place1">
+      <div>加工内容1</div>
+      <input placeholder="加工内容1" type="text" name="product_reason1">
+      <div>出し日1[2000/01/01の様に入力すること]</div>
+      <input placeholder="出し日1" type="text" name="product_first_day1">
+      <div>ライム納期1[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム納期1" type="text" name="product_delivery_schedule1">
+      <div>ライム到着日1[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム到着日1" type="text" name="product_delivery_day1">
+      <div>加工所2</div>
+      <input placeholder="加工所2" type="text" name="product_place2">
+      <div>加工内容2</div>
+      <input placeholder="加工内容2" type="text" name="product_reason2">
+      <div>出し日2[2000/01/01の様に入力すること]</div>
+      <input placeholder="出し日2" type="text" name="product_first_day2">
+      <div>ライム納期2[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム納期2" type="text" name="product_delivery_schedule2">
+      <div>ライム到着日[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム到着日2" type="text" name="product_delivery_day2">
+      <div>加工所3</div>
+      <input placeholder="加工所3" type="text" name="product_place3">
+      <div>加工内容3</div>
+      <input placeholder="加工内容3" type="text" name="product_reason3">
+      <div>出し日3[2000/01/01の様に入力すること]</div>
+      <input placeholder="出し日3" type="text" name="product_first_day3">
+      <div>ライム納期3[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム納期3" type="text" name="product_delivery_schedule3">
+      <div>ライム到着日3[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム到着日3" type="text" name="product_delivery_day3">
+      <div>加工所4</div>
+      <input placeholder="加工所4" type="text" name="product_place4">
+      <div>加工内容4</div>
+      <input placeholder="加工内容4" type="text" name="product_reason4">
+      <div>出し日4[2000/01/01の様に入力すること]</div>
+      <input placeholder="出し日4" type="text" name="product_first_day4">
+      <div>ライム納期4[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム納期4" type="text" name="product_delivery_schedule4">
+      <div>ライム到着日4[2000/01/01の様に入力すること]</div>
+      <input placeholder="ライム到着日4" type="text" name="product_delivery_day4">
+      <div>お預かり品</div>
+      <input placeholder="お預かり品" type="text" name="luggage_goods">
+      <div>受注商品名</div>
+      <input placeholder="受注商品名" type="text" name="product_name">
+      <div>デザインナンバー</div>
+      <input placeholder="デザインナンバー" type="text" name="design_no">
+      <div>受注分類</div>
+      <input placeholder="受注分類" type="text" name="product_category">
+      <div>商品の種類</div>
+      <input placeholder="商品の種類" type="text" name="product_kind">
+      <div>下取り金額</div>
+      <input placeholder="下取り金額" type="text" name="shitadori">
+      <div>内金</div>
+      <input placeholder="内金" type="text" name="uchikin">
+      <div>最終金額※必ず半角入力してください</div>
+      <input placeholder="最終金額" type="text" name="price">
+      <div>備考欄2</div>
+      <textarea placeholder="備考欄2" type="text" name="free_space2" cols="30" rows="10"></textarea>
+      <div>入金日[2000/01/01の様に入力すること]</div>
+      <input placeholder="入金日" type="text" name="pay_string">
+      <div>内金入金日[2000/01/01の様に入力すること]</div>
+      <input placeholder="内金入金日" type="text" name="uchikin_pay_string">
+      <div>担当者名</div>
+      <input placeholder="担当者名" type="text" name="staff_id">
+      <div>お客様名</div>
+      <input placeholder="お客様名" type="text" name="customer_name">
+      <div>お客様住所</div>
+      <input placeholder="お客様住所" type="text" name="customer_adress">
+      <div>お客様ご連絡先[03-0000-0000の様に入力すること※半角]</div>
+      <input placeholder="お客様ご連絡先" type="text" name="customer_telephone">
+      <div>次回の期待ができる方</div>
+      <input type="radio" name="customer_telephone" value="next_expected">
+      <div>来店の理由</div>
+      <textarea placeholder="来店の理由" type="text" name="visit_reason" cols="30" rows="10"></textarea>
+      <div>検索キーワード</div>
+      <input placeholder="検索キーワード" type="text" name="search_keywords">
+      <div>HPを見た方</div>
+      <input placeholder="HPを見た日" type="text" name="show_string_hp">
+      <div>ブラウザ</div>
+      <input placeholder="ブラウザ" type="text" name="browser">
+      <div>端末の種類</div>
+      <input placeholder="端末の種類" type="text" name="terminal_kind">
+      <div>HPの印象</div>
+      <input placeholder="HPの印象" type="text" name="hp_impression">
+      <div>サンプルの価格</div>
+      <input placeholder="サンプルの価格" type="text" name="sample_price">
+      <div>サンプルのデザイン</div>
+      <input placeholder="サンプルのデザイン" type="text" name="sample_design">
+      <div>夢仕立を選んだ理由</div>
+      <input placeholder="夢仕立を選んだ理由" type="text" name="reason_of_yumejitate">
+      <div>HPの気になったところ</div>
+      <input placeholder="HPの気になった点" type="text" name="bad_impression_hp">
+      <div>今後欲しいジュエリー</div>
+      <input placeholder="今後欲しいジュエリー" type="text" name="want_jewelry">
+      <div>掲載可</div>
+      <input placeholder="掲載可" type="text" name="publish_true">
+      <div>メール可</div>
+      <input placeholder="メール可" type="text" name="contact_true">
+      <div>お客様のメールアドレス</div>
+      <input placeholder="お客様のメールアドレス" type="text" name="customer_email">
+      <div>性別</div>
+      <input placeholder="性別" type="text" name="sex">
+      <div>年代</div>
+      <input placeholder="年代" type="text" name="age">
+      <div>受注画像</div>
+              <input type="file" name="image">
+              <div>出来上がり画像</div>
+              <input type="file" name="image2">
+          
+      <input type="submit" value="SENT">
+
+    <% end %>
+  </form>
+  </div>
+</div>

@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 resources :finishs
 
  resources :products do
-  
   resources :pictures
   collection do
     get 'search1'
@@ -21,6 +20,6 @@ resources :finishs
       get 'find7'
       get 'find8'
 
- end
+end
 end
 end
