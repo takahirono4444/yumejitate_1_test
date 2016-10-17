@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   devise_for :users
   root "products#index"
 
-resources :finishs
+  resources :finishs
+
+
 
  resources :products do
-  resources :pictures
+  
+    resources :pictures
   collection do
     get 'search1'
       get 'search'
@@ -19,7 +22,7 @@ resources :finishs
       get 'find6'
       get 'find7'
       get 'find8'
+end
+end
+end
 
-end
-end
-end

@@ -1,6 +1,8 @@
 <html>
 
-<title>夢仕立顧客管理一覧</title>
+
+
+<p><%= render partial: "title_form" %></p>
 <table class="table_design">
 <tr>
 <th>詳細</th>
@@ -78,6 +80,22 @@
 <th><%= sortable "customer_email", "お客様のメールアドレス" %></th>
 <th><%= sortable "sex", "性別" %></th>
 <th><%= sortable "age", "年代" %></th>
+      <th>画像_1</th>
+      <th>画像1名</th>
+      <th>画像1記録日時</th>
+      <th>画像_2</th>
+      <th>画像2名</th>
+      <th>画像2記録日時</th>
+      <th>画像_3</th>
+      <th>画像3名</th>
+      <th>画像3記録日時</th>
+      <th>画像_4</th>
+      <th>画像4名</th>
+      <th>画像4記録日時</th>
+      <th>画像_5</th>
+      <th>画像5名</th>
+      <th>画像5記録日時</th>
+
 <!--
 <th>詳細</th>
  <th>会員番号</th>
@@ -163,7 +181,23 @@
       <td><%= product.member_id %></td>
       <td><%= product.sagyosyo_id %></td>
       <td><%= product.syohin_id %></td>
-      <td><%= product.shop %></td>
+      <td><%= product.shop %>
+        <% if product.shop == "MG" %>
+        <%= image_tag "mg.jpg" %>
+        <% elsif product.shop == "YM" %>
+        <%= image_tag "ym.jpg" %>
+        <% elsif product.shop == "YMW" %>
+        <%= image_tag "ymw.jpg" %>
+        <% elsif product.shop == "AY" %>
+        <%= image_tag "ay.jpg" %>
+        <% elsif product.shop == "AD" %>
+        <%= image_tag "ad.jpg" %>
+        <% elsif product.shop == "LJH" %>
+        <%= image_tag "ljh.jpg" %>
+        <% else %>
+        <%= image_tag "ather.jpg" %>
+      <% end %>
+      </td>
       <td><%= product.name %></td>
       <td><%= product.name_rubi %></td>
       <td><%= product.tel %></td>
@@ -234,24 +268,23 @@
       <td><%= product.customer_email %></td>
       <td><%= product.sex %></td>
       <td><%= product.age %></td>
+           <% @pictures.each do |pic| %>
+           <% if product.id == pic.product_id %>
+      <td><%= image_tag (pic.photo(:thumb)) %></td>
+      <td><%= pic.photo_file_name %></td>
+      <td><%= pic.created_at %></td>
+      <% end %>
+      <% end %>
 
     </tr>
     <% a_price = a_price + product.price if product.price %>
     <% end %>
      <%= paginate(@products) %>
-     <%= form_tag("/products/search1", method: :get) do %>
-                <input class="search__query" name="keyword" placeholder="会員番号検索" type="text" value=""><input type="submit" value="会員番号検索">
-                <% end %>
-     <%= form_tag("/products/search", method: :get) do %>
-                <input class="search__query" name="keyword" placeholder="検索" type="text" value=""><input type="submit" value="SENT" title="検索">
-                <% end %>
+     
                 <div style="foat: left;">
                 <%= render partial: "product_find_form" %>
               </div>
 
-              <div><p><%= link_to "過去一覧", finishs_path %></p></div>
-              <div><p><%= link_to "新規登録", new_product_path %></p></div>
-              <div><p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p></div>
-              <div><%= "合計:#{a_price}" if current_user.id == 1 || 2 %>
+              <div><%= "合計:#{a_price}" if current_user.id == 1 || 2 || 3 %></div>
 </table>
   </html>

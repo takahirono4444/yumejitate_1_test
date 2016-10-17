@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013025944) do
+ActiveRecord::Schema.define(version: 20161017070625) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.string  "tel",                                  limit: 255
     t.string  "email",                                limit: 255
     t.string  "post_no",                              limit: 255
-    t.text    "prefectures",                          limit: 65535
-    t.text    "adress1",                              limit: 65535
-    t.text    "adress2",                              limit: 65535
-    t.text    "free_space1",                          limit: 65535
+    t.string  "prefectures",                          limit: 255
+    t.string  "adress1",                              limit: 255
+    t.string  "adress2",                              limit: 255
+    t.string  "free_space1",                          limit: 255
     t.string  "delete_box",                           limit: 255
     t.string  "first_day",                            limit: 255
     t.string  "shop",                                 limit: 255
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.string  "re_product_main_shop_delivery_string", limit: 255
     t.string  "re_product_sub_shop_delivery_string",  limit: 255
     t.string  "matsuya_tsuuban",                      limit: 255
-    t.text    "special_topics",                       limit: 65535
+    t.string  "special_topics",                       limit: 255
     t.string  "product_place1",                       limit: 255
     t.string  "product_reason1",                      limit: 255
     t.string  "product_first_day1",                   limit: 255
@@ -65,17 +65,17 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.integer "shitadori",                            limit: 4
     t.integer "uchikin",                              limit: 4
     t.integer "price",                                limit: 4
-    t.text    "free_space2",                          limit: 65535
+    t.string  "free_space2",                          limit: 255
     t.string  "pay_string",                           limit: 255
     t.string  "uchikin_pay_string",                   limit: 255
     t.string  "staff_id",                             limit: 255
     t.string  "customer_name",                        limit: 255
-    t.text    "customer_adress",                      limit: 65535
+    t.string  "customer_adress",                      limit: 255
     t.string  "customer_telephone",                   limit: 255
-    t.text    "customer_appearance",                  limit: 65535
+    t.string  "customer_appearance",                  limit: 255
     t.string  "next_expected",                        limit: 255
     t.string  "visit_reason",                         limit: 255
-    t.text    "search_keywords",                      limit: 65535
+    t.string  "search_keywords",                      limit: 255
     t.string  "show_string_hp",                       limit: 255
     t.string  "browser",                              limit: 255
     t.string  "terminal_kind",                        limit: 255
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "last_respons_result",                  limit: 255
-    t.text    "last_special_topics",                  limit: 65535
+    t.string  "last_special_topics",                  limit: 255
     t.string  "customer_evaluation",                  limit: 255
     t.string  "product_id",                           limit: 255
     t.string  "a_finish",                             limit: 255
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.integer  "photo_file_size",    limit: 4
     t.datetime "photo_updated_at"
     t.string   "product_id",         limit: 255
+    t.string   "finish_id",          limit: 255
   end
 
   create_table "products", force: :cascade do |t|
@@ -123,10 +124,10 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.string  "tel",                                  limit: 255
     t.string  "email",                                limit: 255
     t.string  "post_no",                              limit: 255
-    t.text    "prefectures",                          limit: 65535
-    t.text    "adress1",                              limit: 65535
-    t.text    "adress2",                              limit: 65535
-    t.text    "free_space1",                          limit: 65535
+    t.string  "prefectures",                          limit: 255
+    t.string  "adress1",                              limit: 255
+    t.string  "adress2",                              limit: 255
+    t.string  "free_space1",                          limit: 255
     t.string  "delete_box",                           limit: 255
     t.string  "first_day",                            limit: 255
     t.string  "shop",                                 limit: 255
@@ -137,7 +138,7 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.string  "re_product_main_shop_delivery_string", limit: 255
     t.string  "re_product_sub_shop_delivery_string",  limit: 255
     t.string  "matsuya_tsuuban",                      limit: 255
-    t.text    "special_topics",                       limit: 65535
+    t.string  "special_topics",                       limit: 255
     t.string  "product_place1",                       limit: 255
     t.string  "product_reason1",                      limit: 255
     t.string  "product_first_day1",                   limit: 255
@@ -166,17 +167,17 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.integer "shitadori",                            limit: 4
     t.integer "uchikin",                              limit: 4
     t.integer "price",                                limit: 4
-    t.text    "free_space2",                          limit: 65535
+    t.string  "free_space2",                          limit: 255
     t.string  "pay_string",                           limit: 255
     t.string  "uchikin_pay_string",                   limit: 255
     t.string  "staff_id",                             limit: 255
     t.string  "customer_name",                        limit: 255
-    t.text    "customer_adress",                      limit: 65535
+    t.string  "customer_adress",                      limit: 255
     t.string  "customer_telephone",                   limit: 255
-    t.text    "customer_appearance",                  limit: 65535
+    t.string  "customer_appearance",                  limit: 255
     t.string  "next_expected",                        limit: 255
     t.string  "visit_reason",                         limit: 255
-    t.text    "search_keywords",                      limit: 65535
+    t.string  "search_keywords",                      limit: 255
     t.string  "show_string_hp",                       limit: 255
     t.string  "browser",                              limit: 255
     t.string  "terminal_kind",                        limit: 255
@@ -199,7 +200,7 @@ ActiveRecord::Schema.define(version: 20161013025944) do
     t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "last_respons_result",                  limit: 255
-    t.text    "last_special_topics",                  limit: 65535
+    t.string  "last_special_topics",                  limit: 255
     t.string  "customer_evaluation",                  limit: 255
     t.string  "picture_id",                           limit: 255
   end

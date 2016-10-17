@@ -1,99 +1,330 @@
-<div>
-  <div>
-    
-    <%= form_tag("/products/#{@product.id}" , method: :patch) do %>
-      <h3>
+<div class="input">
+        <h3>
         登録する
       </h3>
-      <input value="<%= @product.member_id %>" type="text" name="member_id">
-      <input value="<%= @product.sagyosyo_id %>" type="text" name="sagyosyo_id">
-      <input value="<%= @product.syohin_id %>" type="text" name="syohin_id">
-      <input type="radio" name="shop" value="<%= @product.shop %>">MG
-      <input type="radio" name="shop" value="<%= @product.shop %>">YM
-      <input type="radio" name="shop" value="<%= @product.shop %>">AY
-      <input type="radio" name="shop" value="<%= @product.shop %>">AD
-      <input type="radio" name="shop" value="<%= @product.shop %>">YMW
-      <input type="radio" name="shop" value="<%= @product.shop %>">LJH
-      <input type="radio" name="shop" value="<%= @product.shop %>">結婚相談室関連
-      <input type="radio" name="shop" value="その他">その他(備考欄に記入してください)
-      <input value="<%= @product.name %>" type="text" name="name">
-      <input value="<%= @product.name_rubi %>" type="text" name="name_rubi">
-      <input value="<%= @product.tel %>" type="text" name="tel">
-      <input value="<%= @product.email %>" type="text" name="email">
-      <input value="<%= @product.post_no %>" type="text" name="post_no">
-      <input value="<%= @product.prefectures %>" type="text" name="prefectures">
-      <input value="<%= @product.adress1 %>" type="text" name="adress1">
-      <input value="<%= @product.adress2 %>" type="text" name="adress2">
-      <textarea value="<%= @product.free_space1 %>" type="text" name="free_space1" cols="30" rows="10"></textarea>
-      <input value="<%= @product.first_day %>" type="text" name="first_day">
-      <input value="<%= @product.delivery_schedule %>" type="text" name="delivery_schedule">
-      <input value="<%= @product.delivery_string %>" type="text" name="delivery_string">
-      <input value="<%= @product.sub_shop_delivery_string %>" type="text" name="sub_shop_delivery_string">
-      <input value="<%= @product.main_shop_delivery_string %>" type="text" name="main_shop_delivery_string">
-      <input value="<%= @product.re_product_sub_shop_delivery_string %>" type="text" name="re_product_sub_shop_delivery_string">
-      <input value="<%= @product.re_product_main_shop_delivery_string %>" type="text" name="re_product_main_shop_delivery_string">
-      <input value="<%= @product.matsuya_tsuuban %>" type="text" name="matsuya_tsuuban">
-      <input value="<%= @product.special_topics %>" type="text" name="special_topics">
-      <input value="<%= @product.product_place1 %>" type="text" name="product_place1">
-      <input value="<%= @product.product_reason1 %>" type="text" name="product_reason1">
-      <input value="<%= @product.product_first_day1 %>" type="text" name="product_first_day1">
-      <input value="<%= @product.product_delivery_schedule1 %>" type="text" name="product_delivery_schedule1">
-      <input value="<%= @product.product_delivery_day1 %>" type="text" name="product_delivery_day1">
-      <input value="<%= @product.product_place2 %>" type="text" name="product_place2">
-      <input value="<%= @product.product_reason2 %>" type="text" name="product_reason2">
-      <input value="<%= @product.product_first_day2 %>" type="text" name="product_first_day2">
-      <input value="<%= @product.product_delivery_schedule2 %>" type="text" name="product_delivery_schedule2">
-      <input value="<%= @product.product_delivery_day2 %>" type="text" name="product_delivery_day2">
-      <input value="<%= @product.product_place3 %>" type="text" name="product_place3">
-      <input value="<%= @product.product_reason3 %>" type="text" name="product_reason3">
-      <input value="<%= @product.product_first_day3 %>" type="text" name="product_first_day3">
-      <input value="<%= @product.product_delivery_schedule3 %>" type="text" name="product_delivery_schedule3">
-      <input value="<%= @product.product_delivery_day3 %>" type="text" name="product_delivery_day3">
-      <input value="<%= @product.product_place4 %>" type="text" name="product_place4">
-      <input value="<%= @product.product_reason4 %>" type="text" name="product_reason4">
-      <input value="<%= @product.product_first_day4 %>" type="text" name="product_first_day4">
-      <input value="<%= @product.product_delivery_schedule4 %>" type="text" name="product_delivery_schedule4">
-      <input value="<%= @product.product_delivery_day4 %>" type="text" name="product_delivery_day4">
-      <input value="<%= @product.product_delivery_day4 %>" type="text" name="product_delivery_day4">
-      <input value="<%= @product.luggage_goods %>" type="text" name="luggage_goods">
-      <input value="<%= @product.product_name %>" type="text" name="product_name">
-      <input value="<%= @product.design_no %>" type="text" name="design_no">
-      <input value="<%= @product.product_category %>" type="text" name="product_category">
-      <input value="<%= @product.product_kind %>" type="text" name="product_kind">
-      <input value="<%= @product.shitadori %>" type="text" name="shitadori">
-      <input value="<%= @product.uchikin %>" type="text" name="uchikin">
-      <input value="<%= @product.price %>" type="text" name="price">
-      <textarea value="<%= @product.free_space2 %>" type="text" name="free_space2" cols="30" rows="10"></textarea>
-      <input value="<%= @product.pay_string %>" type="text" name="pay_string">
-      <input value="<%= @product.uchikin_pay_string %>" type="text" name="uchikin_pay_string">
-      <input value="<%= @product.staff_id %>" type="text" name="staff_id">
-      <input value="<%= @product.customer_name %>" type="text" name="customer_name">
-      <input value="<%= @product.customer_adress %>" type="text" name="customer_adress">
-      <input value="<%= @product.customer_telephone %>" type="text" name="customer_telephone">
-      <input type="radio" name="customer_telephone" value="<%= @product.next_expected %>">次回の期待ができる方
-      <textarea value="<%= @product.visit_reason %>" type="text" name="visit_reason" cols="30" rows="10"></textarea>
-      <input value="<%= @product.search_keywords %>" type="text" name="search_keywords">
-      <input value="<%= @product.show_string_hp %>" type="text" name="show_string_hp">
-      <input value="<%= @product.browser %>" type="text" name="browser">
-      <input value="<%= @product.terminal_kind %>" type="text" name="terminal_kind">
-      <input value="<%= @product.hp_impression %>" type="text" name="hp_impression">
-      <input value="<%= @product.sample_price %>" type="text" name="sample_price">
-      <input value="<%= @product.sample_design %>" type="text" name="sample_design">
-      <input value="<%= @product.reason_of_yumejitate %>" type="text" name="reason_of_yumejitate">
-      <input value="<%= @product.bad_impression_hp %>" type="text" name="bad_impression_hp">
-      <input value="<%= @product.want_jewelry %>" type="text" name="want_jewelry">
-      <input value="<%= @product.publish_true %>" type="text" name="publish_true">
-      <input value="<%= @product.contact_true %>" type="text" name="contact_true">
-      <input value="<%= @product.customer_email %>" type="text" name="customer_email">
-      <input value="<%= @product.sex %>" type="text" name="sex">
-      <input value="<%= @product.age %>" type="text" name="age">
-      <input type="radio" name="a_finish" value="<%= @finish.a_finish %>">済み
-       <input type="file" name="photo">
-      
-      <input type="submit" value="SENT">
-      
+      <%= form_for(@product, html: { method: :put }) do |f| %>
+
+
+<div class="input_form_red">
+      <%= f.label :"必ず半角で入力すること!" %>
+      <br>
+      <%= f.label :"会員番号＜member＞" %>
+      <%= f.text_field :member_id %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
+      <%= f.label :作業書番号 %>
+<%= f.text_field :sagyosyo_id %>
+      </div>
+<div class="input_form">
+      <%= f.label :商品番号 %>
+<%= f.text_field :syohin_id %>
+      </div>
+<div class="input_form_red">
+<%= f.label :"受注場所＜shop＞ ※必須"%>
+<br>
+<%= f.radio_button :shop, "MG" %> <%= f.label :"MG" %>
+<%= f.radio_button :shop, "YM" %> <%= f.label :"YM" %>
+<%= f.radio_button :shop, "YMW" %> <%= f.label :"YMW" %>
+<%= f.radio_button :shop, "AY" %> <%= f.label :"AY" %>
+<%= f.radio_button :shop, "AD" %> <%= f.label :"AD" %>
+<%= f.radio_button :shop, "LJH" %> <%= f.label :"LJH" %>
+<%= f.radio_button :shop, "その他" %> <%= f.label :"その他" %>
+      </div>
+<div class="input_form_red">
+      <%= f.label :"名前＜name＞" %>
+<%= f.text_field :name %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
+      <%= f.label :ふりがな %>
+<%= f.text_field :name_rubi %>
+      </div>
+<div class="input_form">
+      <%= f.label :電話 %>
+<%= f.text_field :tel %>
+      </div>
+<div class="input_form">
+      <%= f.label :メール %>
+<%= f.text_field :email %>
+      </div>
+<div class="input_form">
+      <%= f.label :〒 %>
+<%= f.text_field :post_no %>
+      </div>
+<div class="input_form">
+      <%= f.label :都道府県 %>
+<%= f.text_field :prefectures %>
+      </div>
+<div class="input_form">
+      <%= f.label :住所1 %>
+<%= f.text_area :adress1, size: "40x5" %>
+      </div>
+<div class="input_form">
+      <%= f.label :住所2 %>
+<%= f.text_area :adress2, size: "40x5" %>
+      </div>
+<div class="input_form">
+      <%= f.label :備考欄 %>
+<%= f.text_area :free_space1, size: "40x10" %>
+      </div>
+<div class="input_form_red">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
+      <%= f.label :"受注日＜first_day＞" %>
+<%= f.text_field :first_day %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
+      <%= f.label :納期 %>
+<%= f.text_field :delivery_schedule %>
+      </div>
+<div class="input_form">
+      <%= f.label :納品日 %>
+<%= f.text_field :delivery_string %>
+      </div>
+<div class="input_form">
+      <%= f.label :店舗→加工仕分け所 %>
+<%= f.text_field :sub_shop_delivery_string %>
+      </div>
+<div class="input_form">
+      <%= f.label :加工仕分け所→店舗 %>
+<%= f.text_field :main_shop_delivery_string %>
+      </div>
+<div class="input_form">
+      <%= f.label :"店舗→加工仕分け所(再加工)" %>
+<%= f.text_field :re_product_sub_shop_delivery_string %>
+      </div>
+<div class="input_form">
+      <%= f.label :"加工仕分け所→店舗(再加工)" %>
+<%= f.text_field :re_product_main_shop_delivery_string %>
+      </div>
+<div class="input_form">
+      <%= f.label :松屋通番 %>
+<%= f.text_field :matsuya_tsuuban %>
+      </div>
+<div class="input_form">
+      <%= f.label :特記事項 %>
+<%= f.text_field :special_topics %>
+      </div>
+<div class="input_form">
+      <%= f.label :加工所1 %>
+<%= f.text_field :product_place1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :加工内容1 %>
+<%= f.text_field :product_reason1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :出し日1 %>
+<%= f.text_field :product_first_day1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :ライム納期1 %>
+<%= f.text_field :product_delivery_schedule1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :ライム到着日1 %>
+<%= f.text_field :product_delivery_day1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :加工所2 %>
+<%= f.text_field :product_place2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :加工内容2 %>
+<%= f.text_field :product_reason2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :出し日2 %>
+<%= f.text_field :product_first_day2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :ライム納期2 %>
+<%= f.text_field :product_delivery_schedule2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :ライム到着日2 %>
+<%= f.text_field :product_delivery_day2 %>
+            </div>
+<div class="input_form">
+      <%= f.label :加工所3 %>
+<%= f.text_field :product_place3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :加工内容3 %>
+<%= f.text_field :product_reason3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :出し日3 %>
+<%= f.text_field :product_first_day3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :ライム納期3 %>
+<%= f.text_field :product_delivery_schedule3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :ライム到着日3 %>
+<%= f.text_field :product_delivery_day3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :加工所4 %>
+<%= f.text_field :product_place4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :加工内容4 %>
+<%= f.text_field :product_reason4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :出し日4 %>
+<%= f.text_field :product_first_day4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :ライム納期4 %>
+<%= f.text_field :product_delivery_schedule4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :ライム到着日4 %>
+<%= f.text_field :product_delivery_day4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :ライム到着日4 %>
+<%= f.text_field :product_delivery_day4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :お預かり品 %>
+<%= f.text_field :luggage_goods %>
+            </div>
+<div class="input_form">
+      <%= f.label :受注商品名 %>
+<%= f.text_field :product_name %>
+            </div>
+<div class="input_form">
+      <%= f.label :デザインナンバー %>
+<%= f.text_field :design_no %>
+            </div>
+<div class="input_form">
+      <%= f.label :受注分類 %>
+<%= f.text_field :product_category %>
+            </div>
+<div class="input_form">
+      <%= f.label :商品の種類 %>
+<%= f.text_field :product_kind %>
+            </div>
+<div class="input_form">
+      <%= f.label :下取り金額 %>
+<%= f.text_field :shitadori %>
+            </div>
+<div class="input_form">
+      <%= f.label :内金 %>
+<%= f.text_field :uchikin %>
+            </div>
+<div class="input_form">
+      <%= f.label :最終金額 %>
+<%= f.text_field :price %>
+            </div>
+<div class="input_form">
+      <%=f.label :備考欄2 %>
+<%= f.text_area :free_space2, size: "40x10" %>
+            </div>
+<div class="input_form">
+      <%= f.label :入金日 %>
+<%= f.text_field :pay_string %>
+            </div>
+<div class="input_form">
+      <%= f.label :内金入金日 %>
+<%= f.text_field :uchikin_pay_string %>
+            </div>
+<div class="input_form">
+      <%= f.label :担当者名 %>
+<%= f.text_field :staff_id %>
+            </div>
+<div class="input_form">
+      <%= f.label :お客様名 %>
+<%= f.text_field :customer_name %>
+            </div>
+<div class="input_form">
+      <%= f.label :お客様住所 %>
+<%= f.text_area :customer_adress, size: "40x5" %>
+            </div>
+<div class="input_form">
+      <%= f.label :お客様ご連絡先 %>
+<%= f.text_field :customer_telephone %>
+            </div>
+<div class="input_form">
+<%= f.radio_button :next_expected, "できる" %><%= f.label :"次回の期待ができる方" %>
+      </div>
+<div class="input_form">
+      <%=f.label :来店の理由 %>
+<%= f.text_area :visit_reason, size: "40x10" %>
+      </div>
+<div class="input_form">
+      <%= f.label :検索キーワード %>
+<%= f.text_field :search_keywords %>
+      </div>
+<div class="input_form">
+      <%= f.label :HPを見た日 %>
+<%= f.text_field :show_string_hp %>
+      </div>
+<div class="input_form">
+      <%= f.label :ブラウザ %>
+<%= f.text_field :browser %>
+      </div>
+<div class="input_form">
+      <%= f.label :端末の種類 %>
+<%= f.text_field :terminal_kind %>
+      </div>
+<div class="input_form">
+      <%= f.label :HPの印象 %>
+<%= f.text_field :hp_impression %>
+      </div>
+<div class="input_form">
+      <%= f.label :サンプルの価格 %>
+<%= f.text_field :sample_price %>
+      </div>
+<div class="input_form">
+      <%= f.label :サンプルのデザイン %>
+<%= f.text_field :sample_design %>
+      </div>
+<div class="input_form">
+      <%= f.label :夢仕立を選んだ理由 %>
+<%= f.text_field :reason_of_yumejitate %>
+      </div>
+<div class="input_form">
+      <%= f.label :HPの気になった点 %>
+<%= f.text_field :bad_impression_hp %>
+      </div>
+<div class="input_form">
+      <%= f.label :今後欲しいジュエリー %>
+<%= f.text_field :want_jewelry %>
+      </div>
+<div class="input_form">
+      <%= f.label :掲載可 %>
+<%= f.text_field :publish_true %>
+      </div>
+<div class="input_form">
+      <%= f.label :メール可 %>
+<%= f.text_field :contact_true %>
+      </div>
+<div class="input_form">
+      <%= f.label :お客様のメールアドレス %>
+<%= f.text_field :customer_email %>
+      </div>
+<div class="input_form">
+      <%= f.label :性別 %>
+<%= f.text_field :sex %>
+      </div>
+<div class="input_form">
+      <%= f.label :年代 %>
+<%= f.text_field :age %>
+      </div>
+<div class="input_form" >
+<%= f.label :画像 %>
+<%= f.file_field :photo %>
+      </div>
+            <%= f.submit %>
+
+
+
+     
+
+
     <% end %>
-
-
-  </div>
 </div>

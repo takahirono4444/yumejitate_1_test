@@ -1,6 +1,6 @@
 <html>
 
-<title>夢仕立顧客管理一覧</title>
+<p><%= render partial: "title_form" %></p>
 <table class="table_design">
 <tr>
 <th>編集/削除</th>
@@ -78,7 +78,21 @@
       <th>お客様のメールアドレス</th>
       <th>性別</th>
       <th>年代</th>
-      <th>商品画像</th>
+      <th>画像_1</th>
+      <th>画像1名</th>
+      <th>画像1記録日時</th>
+      <th>画像_2</th>
+      <th>画像2名</th>
+      <th>画像2記録日時</th>
+      <th>画像_3</th>
+      <th>画像3名</th>
+      <th>画像3記録日時</th>
+      <th>画像_4</th>
+      <th>画像4名</th>
+      <th>画像4記録日時</th>
+      <th>画像_5</th>
+      <th>画像5名</th>
+      <th>画像5記録日時</th>
     </tr>
  <tr>
  <td><ul class="more_list">
@@ -165,17 +179,19 @@
       <td><%= @finish.sex %></td>
       <td><%= @finish.age %></td>
       <% @pictures.each do |pic| %>
-      <td>      <%= image_tag pic.image_file_name  %>
-      </td>
+      <td><%= image_tag(pic.photo(:medium)) %></td>
+      <td><%= pic.photo_file_name %></td>
+      <td><%= pic.created_at %></td>
+      
       <% end %>
 
     </tr>
-     <%= form_tag("/finishs/search", method: :get) do %>
-                <input class="search__query" name="keyword" placeholder="会員番号検索" type="text" value=""><button class="btn-search" title="検索" type="submit"></button>
-              <% end %>
+     <div style="foat: left;">
+                <%= render partial: "finish_find_form" %>
+              </div>
               <div>
               <a href="/">一覧へもどる</a>
               </div>
-              <div><p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p></div>
+
 </table>
   </html>

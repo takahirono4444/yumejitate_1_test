@@ -1,97 +1,170 @@
 <div>
-  <div>
-    <%= form_tag("/finishs", method: :post) do %>
-      <h3>
+        <h3>
         登録する
       </h3>
-      <input value="<%= @finish.member_id %>" type="text" name="member_id">
-      <input value="<%= @finish.sagyosyo_id %>" type="text" name="sagyosyo_id">
-      <input value="<%= @finish.syohin_id %>" type="text" name="product_id">
-      <input type="radio" name="shop" value="<%= @finish.shop %>">MG
-      <input type="radio" name="shop" value="<%= @finish.shop %>">YM
-      <input type="radio" name="shop" value="<%= @finish.shop %>">AY
-      <input type="radio" name="shop" value="<%= @finish.shop %>">AD
-      <input type="radio" name="shop" value="<%= @finish.shop %>">YMW
-      <input type="radio" name="shop" value="<%= @finish.shop %>">LJH
-      <input type="radio" name="shop" value="<%= @finish.shop %>">結婚相談室関連
-      <input type="radio" name="shop" value="<%= @finish.shop %>">その他
-      <input value="<%= @finish.shop %>" type="text" name="shop">
-      <input value="<%= @finish.name %>" type="text" name="name">
-      <input value="<%= @finish.name_rubi %>" type="text" name="name_rubi">
-      <input value="<%= @finish.tel %>" type="text" name="tel">
-      <input value="<%= @finish.email %>" type="text" name="email">
-      <input value="<%= @finish.post_no %>" type="text" name="post_no">
-      <input value="<%= @finish.prefectures %>" type="text" name="prefectures">
-      <input value="<%= @finish.adress1 %>" type="text" name="adress1">
-      <input value="<%= @finish.adress2 %>" type="text" name="adress2">
-      <textarea value="<%= @finish.free_space1 %>" type="text" name="free_space1" cols="30" rows="10"></textarea>
-      <input value="<%= @finish.first_day %>" type="text" name="first_day">
-      <input value="<%= @finish.delivery_schedule %>" type="text" name="delivery_schedule">
-      <input value="<%= @finish.delivery_string %>" type="text" name="delivery_string">
-      <input value="<%= @finish.sub_shop_delivery_string %>" type="text" name="sub_shop_delivery_string">
-      <input value="<%= @finish.main_shop_delivery_string %>" type="text" name="main_shop_delivery_string">
-      <input value="<%= @finish.re_product_sub_shop_delivery_string %>" type="text" name="re_product_sub_shop_delivery_string">
-      <input value="<%= @finish.re_product_main_shop_delivery_string %>" type="text" name="re_product_main_shop_delivery_string">
-      <input value="<%= @finish.matsuya_tsuuban %>" type="text" name="matsuya_tsuuban">
-      <input value="<%= @finish.special_topics %>" type="text" name="special_topics">
-      <input value="<%= @finish.product_place1 %>" type="text" name="product_place1">
-      <input value="<%= @finish.product_reason1 %>" type="text" name="product_reason1">
-      <input value="<%= @finish.product_first_day1 %>" type="text" name="product_first_day1">
-      <input value="<%= @finish.product_delivery_schedule1 %>" type="text" name="product_delivery_schedule1">
-      <input value="<%= @finish.product_delivery_day1 %>" type="text" name="product_delivery_day1">
-      <input value="<%= @finish.product_place2 %>" type="text" name="product_place2">
-      <input value="<%= @finish.product_reason2 %>" type="text" name="product_reason2">
-      <input value="<%= @finish.product_first_day2 %>" type="text" name="product_first_day2">
-      <input value="<%= @finish.product_delivery_schedule2 %>" type="text" name="product_delivery_schedule2">
-      <input value="<%= @finish.product_delivery_day2 %>" type="text" name="product_delivery_day2">
-      <input value="<%= @finish.product_place3 %>" type="text" name="product_place3">
-      <input value="<%= @finish.product_reason3 %>" type="text" name="product_reason3">
-      <input value="<%= @finish.product_first_day3 %>" type="text" name="product_first_day3">
-      <input value="<%= @finish.product_delivery_schedule3 %>" type="text" name="product_delivery_schedule3">
-      <input value="<%= @finish.product_delivery_day3 %>" type="text" name="product_delivery_day3">
-      <input value="<%= @finish.product_place4 %>" type="text" name="product_place4">
-      <input value="<%= @finish.product_reason4 %>" type="text" name="product_reason4">
-      <input value="<%= @finish.product_first_day4 %>" type="text" name="product_first_day4">
-      <input value="<%= @finish.product_delivery_schedule4 %>" type="text" name="product_delivery_schedule4">
-      <input value="<%= @finish.product_delivery_day4 %>" type="text" name="product_delivery_day4">
-      <input value="<%= @finish.product_delivery_day4 %>" type="text" name="product_delivery_day4">
-      <input value="<%= @finish.luggage_goods %>" type="text" name="luggage_goods">
-      <input value="<%= @finish.product_name %>" type="text" name="product_name">
-      <input value="<%= @finish.design_no %>" type="text" name="design_no">
-      <input value="<%= @finish.product_category %>" type="text" name="product_category">
-      <input value="<%= @finish.product_kind %>" type="text" name="product_kind">
-      <input value="<%= @finish.shitadori %>" type="text" name="shitadori">
-      <input value="<%= @finish.uchikin %>" type="text" name="uchikin">
-      <input value="<%= @finish.price %>" type="text" name="price">
-      <textarea value="<%= @finish.free_space2 %>" type="text" name="free_space2" cols="30" rows="10"></textarea>
-      <input value="<%= @finish.pay_string %>" type="text" name="pay_string">
-      <input value="<%= @finish.uchikin_pay_string %>" type="text" name="uchikin_pay_string">
-      <input value="<%= @finish.staff_id %>" type="text" name="staff_id">
-      <input value="<%= @finish.customer_name %>" type="text" name="customer_name">
-      <input value="<%= @finish.customer_adress %>" type="text" name="customer_adress">
-      <input value="<%= @finish.customer_telephone %>" type="text" name="customer_telephone">
-      <input type="radio" name="customer_telephone" value="<%= @finish.next_expected %>">次回の期待ができる方
-      <textarea value="<%= @finish.visit_reason %>" type="text" name="visit_reason" cols="30" rows="10"></textarea>
-      <input value="<%= @finish.search_keywords %>" type="text" name="search_keywords">
-      <input value="<%= @finish.show_string_hp %>" type="text" name="show_string_hp">
-      <input value="<%= @finish.browser %>" type="text" name="browser">
-      <input value="<%= @finish.terminal_kind %>" type="text" name="terminal_kind">
-      <input value="<%= @finish.hp_impression %>" type="text" name="hp_impression">
-      <input value="<%= @finish.sample_price %>" type="text" name="sample_price">
-      <input value="<%= @finish.sample_design %>" type="text" name="sample_design">
-      <input value="<%= @finish.reason_of_yumejitate %>" type="text" name="reason_of_yumejitate">
-      <input value="<%= @finish.bad_impression_hp %>" type="text" name="bad_impression_hp">
-      <input value="<%= @finish.want_jewelry %>" type="text" name="want_jewelry">
-      <input value="<%= @finish.publish_true %>" type="text" name="publish_true">
-      <input value="<%= @finish.contact_true %>" type="text" name="contact_true">
-      <input value="<%= @finish.customer_email %>" type="text" name="customer_email">
-      <input value="<%= @finish.sex %>" type="text" name="sex">
-      <input value="<%= @finish.age %>" type="text" name="age">
+      <%= form_for(@finish, html: { method: :put }) do |f| %>
+
       
-      <input type="submit" value="SENT">
+
+      <%= f.label :会員番号 %>
+<%= f.text_field :member_id %>
+      <%= f.label :作業書番号 %>
+<%= f.text_field :sagyosyo_id %>
+      <%= f.label :商品番号 %>
+<%= f.text_field :syohin_id %>
+<%= f.label :受注場所 %>
+<%= f.text_field :shop %>
+      <%= f.label :名前 %>
+<%= f.text_field :name %>
+      <%= f.label :ふりがな %>
+<%= f.text_field :name_rubi %>
+      <%= f.label :電話 %>
+<%= f.text_field :tel %>
+      <%= f.label :メール %>
+<%= f.text_field :email %>
+      <%= f.label :〒 %>
+<%= f.text_field :post_no %>
+      <%= f.label :都道府県 %>
+<%= f.text_field :prefectures %>
+      <%= f.label :住所1 %>
+<%= f.text_area :adress1, size: "30x20" %>
+      <%= f.label :住所2 %>
+<%= f.text_area :adress2, size: "30x20" %>
+      <%= f.label :備考欄 %>
+<%= f.text_area :free_space1, size: "30x20" %>
+      <%= f.label :受注日 %>
+<%= f.text_field :first_day %>
+      <%= f.label :納期 %>
+<%= f.text_field :delivery_schedule %>
+      <%= f.label :納品日 %>
+<%= f.text_field :delivery_string %>
+      <%= f.label :店舗→加工仕分け所 %>
+<%= f.text_field :sub_shop_delivery_string %>
+      <%= f.label :加工仕分け所→店舗 %>
+<%= f.text_field :main_shop_delivery_string %>
+      <%= f.label :"店舗→加工仕分け所(再加工)" %>
+<%= f.text_field :re_product_sub_shop_delivery_string %>
+      <%= f.label :"加工仕分け所→店舗(再加工)" %>
+<%= f.text_field :re_product_main_shop_delivery_string %>
+      <%= f.label :松屋通番 %>
+<%= f.text_field :matsuya_tsuuban %>
+      <%= f.label :特記事項 %>
+<%= f.text_field :special_topics %>
+      <%= f.label :加工所1 %>
+<%= f.text_field :product_place1 %>
+      <%= f.label :加工内容1 %>
+<%= f.text_field :product_reason1 %>
+      <%= f.label :出し日1 %>
+<%= f.text_field :product_first_day1 %>
+      <%= f.label :ライム納期1 %>
+<%= f.text_field :product_delivery_schedule1 %>
+      <%= f.label :ライム到着日1 %>
+<%= f.text_field :product_delivery_day1 %>
+      <%= f.label :加工所2 %>
+<%= f.text_field :product_place2 %>
+      <%= f.label :加工内容2 %>
+<%= f.text_field :product_reason2 %>
+      <%= f.label :出し日2 %>
+<%= f.text_field :product_first_day2 %>
+      <%= f.label :ライム納期2 %>
+<%= f.text_field :product_delivery_schedule2 %>
+      <%= f.label :ライム到着日2 %>
+<%= f.text_field :product_delivery_day2 %>
+      <%= f.label :加工所3 %>
+<%= f.text_field :product_place3 %>
+      <%= f.label :加工内容3 %>
+<%= f.text_field :product_reason3 %>
+      <%= f.label :出し日3 %>
+<%= f.text_field :product_first_day3 %>
+      <%= f.label :ライム納期3 %>
+<%= f.text_field :product_delivery_schedule3 %>
+      <%= f.label :ライム到着日3 %>
+<%= f.text_field :product_delivery_day3 %>
+      <%= f.label :加工所4 %>
+<%= f.text_field :product_place4 %>
+      <%= f.label :加工内容4 %>
+<%= f.text_field :product_reason4 %>
+      <%= f.label :出し日4 %>
+<%= f.text_field :product_first_day4 %>
+      <%= f.label :ライム納期4 %>
+<%= f.text_field :product_delivery_schedule4 %>
+      <%= f.label :ライム到着日4 %>
+<%= f.text_field :product_delivery_day4 %>
+      <%= f.label :ライム到着日4 %>
+<%= f.text_field :product_delivery_day4 %>
+      <%= f.label :お預かり品 %>
+<%= f.text_field :luggage_goods %>
+      <%= f.label :受注商品名 %>
+<%= f.text_field :product_name %>
+      <%= f.label :デザインナンバー %>
+<%= f.text_field :design_no %>
+      <%= f.label :受注分類 %>
+<%= f.text_field :product_category %>
+      <%= f.label :商品の種類 %>
+<%= f.text_field :product_kind %>
+      <%= f.label :下取り金額 %>
+<%= f.text_field :shitadori %>
+      <%= f.label :内金 %>
+<%= f.text_field :uchikin %>
+      <%= f.label :最終金額 %>
+<%= f.text_field :price %>
+      <%=f.label :備考欄2 %>
+<%= f.text_area :free_space2, size: "30x20" %>
+      <%= f.label :入金日 %>
+<%= f.text_field :pay_string %>
+      <%= f.label :内金入金日 %>
+<%= f.text_field :uchikin_pay_string %>
+      <%= f.label :担当者名 %>
+<%= f.text_field :staff_id %>
+      <%= f.label :お客様名 %>
+<%= f.text_field :customer_name %>
+      <%= f.label :お客様住所 %>
+<%= f.text_area :customer_adress, size: "30x20" %>
+      <%= f.label :お客様ご連絡先 %>
+<%= f.text_field :customer_telephone %>
+<label><%= f.radio_button :next_expected, "1" %>次回の期待ができる方</label>
+      <%=f.label :来店の理由 %>
+<%= f.text_area :visit_reason, size: "30x20" %>
+      <%= f.label :検索キーワード %>
+<%= f.text_field :search_keywords %>
+      <%= f.label :HPを見た日 %>
+<%= f.text_field :show_string_hp %>
+      <%= f.label :ブラウザ %>
+<%= f.text_field :browser %>
+      <%= f.label :端末の種類 %>
+<%= f.text_field :terminal_kind %>
+      <%= f.label :HPの印象 %>
+<%= f.text_field :hp_impression %>
+      <%= f.label :サンプルの価格 %>
+<%= f.text_field :sample_price %>
+      <%= f.label :サンプルのデザイン %>
+<%= f.text_field :sample_design %>
+      <%= f.label :夢仕立を選んだ理由 %>
+<%= f.text_field :reason_of_yumejitate %>
+      <%= f.label :HPの気になった点 %>
+<%= f.text_field :bad_impression_hp %>
+      <%= f.label :今後欲しいジュエリー %>
+<%= f.text_field :want_jewelry %>
+      <%= f.label :掲載可 %>
+<%= f.text_field :publish_true %>
+      <%= f.label :メール可 %>
+<%= f.text_field :contact_true %>
+      <%= f.label :お客様のメールアドレス %>
+<%= f.text_field :customer_email %>
+      <%= f.label :性別 %>
+<%= f.text_field :sex %>
+      <%= f.label :年代 %>
+<%= f.text_field :age %>
+<%= f.label :出来上がり画像 %>
+<%= f.file_field :photo %>
+
+
+      <%= f.submit %>
+
+
+
+     
+
 
     <% end %>
-
-
-  </div>
 </div>

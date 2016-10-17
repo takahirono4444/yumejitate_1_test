@@ -1,8 +1,9 @@
 <html>
-<title>夢仕立顧客管理一覧</title>
+
+<p><%= render partial: "title_form" %></p>
 <table class="table_design">
 <tr>
- <th>詳細</th>
+<th>詳細</th>
 <th><%= sortable "member_id", "会員番号" %></th>
 <th><%= sortable "sagyosyo_id", "作業書番号" %></th>
 <th><%= sortable "syohin_id", "商品番号" %></th>
@@ -77,10 +78,87 @@
 <th><%= sortable "customer_email", "お客様のメールアドレス" %></th>
 <th><%= sortable "sex", "性別" %></th>
 <th><%= sortable "age", "年代" %></th>
+
+<!--
+<th>詳細</th>
+ <th>会員番号</th>
+      <th><作業書番号</th>
+      <th>商品番号</th>
+      <th>受注場所</th>
+      <th>名前</th>
+      <th>ふりがな</th>
+      <th>電話</th>
+      <th>メール</th>
+      <th>〒</th>
+      <th>都道府県</th>
+      <th>住所1</th>
+      <th>住所2</th>
+      <th>備考欄</th>
+      <th>受注日</th>
+      <th>納期</th>
+      <th>納品日</th>
+      <th>店舗→加工仕分け所</th>
+      <th>加工仕分け所→店舗</th>
+      <th>店舗→加工仕分け所(再加工)</th>
+      <th>加工仕分け所→店舗(再加工)</th>
+      <th>松屋通番</th>
+      <th>特記事項</th>
+      <th>加工所1</th>
+      <th>加工内容1</th>
+      <th>出し日1</th>
+      <th>ライム納期1</th>
+      <th>ライム到着日1</th>
+      <th>加工所2</th>
+      <th>加工内容2</th>
+      <th>出し日2</th>
+      <th>ライム納期2</th>
+      <th>ライム到着日2</th>
+      <th>加工所3</th>
+      <th>加工内容3</th>
+      <th>出し日3</th>
+      <th>ライム納期3</th>
+      <th>ライム到着日3</th>
+      <th>加工所4</th>
+      <th>加工内容4</th>
+      <th>出し日4</th>
+      <th>ライム納期4</th>
+      <th>ライム到着日4</th>
+      <th>お預かり品</th>
+      <th>受注商品名</th>
+      <th>デザインナンバー</th>
+      <th>受注分類</th>
+      <th>商品の種類</th>
+      <th>下取り金額</th>
+      <th>内金</th>
+      <th>最終金額</th>
+      <th>備考欄2</th>
+      <th>入金日</th>
+      <th>内金入金日</th>
+      <th>担当者名</th>
+      <th>お客様名</th>
+      <th>お客様住所</th>
+      <th>お客様ご連絡先</th>
+      <th>次回の期待</th>
+      <th>来店の理由</th>
+      <th>検索キーワード</th>
+      <th>HPを見た日</th>
+      <th>ブラウザ</th>
+      <th>端末の種類</th>
+      <th>HPの印象</th>
+      <th>サンプルの価格</th>
+      <th>サンプルのデザイン</th>
+      <th>夢仕立を選んだ理由</th>
+      <th>HPの気になった点</th>
+      <th>今後欲しいジュエリー</th>
+      <th>掲載可</th>
+      <th>メール可</th>
+      <th>お客様のメールアドレス</th>
+      <th>性別</th>
+      <th>年代</th>
+      -->
     </tr>
-
-  <% @product.each do |product| %>
-
+    <% a_price = 0 %>
+<% @products.each do |product| %>
  <tr>
  <td><%= render partial: "product", locals: {product: product} %></td>
       <td><%= product.member_id %></td>
@@ -109,7 +187,7 @@
       <td><%= product.product_reason1 %></td>
       <td><%= product.product_first_day1 %></td>
       <td><%= product.product_delivery_schedule1 %></td>
-      <td><%= product.product_delivery_day2 %></td>
+      <td><%= product.product_delivery_day1 %></td>
       <td><%= product.product_place2 %></td>
       <td><%= product.product_reason2 %></td>
       <td><%= product.product_first_day2 %></td>
@@ -157,17 +235,16 @@
       <td><%= product.customer_email %></td>
       <td><%= product.sex %></td>
       <td><%= product.age %></td>
+      
 
     </tr>
+    <% a_price = a_price + product.price if product.price %>
     <% end %>
-     <%= form_tag('/products/search', method: :get) do %>
-     <input class="search__query" name="keyword" placeholder="会員番号検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button>                
-              <% end %>
-              <div>
-              <a href="/">一覧へもどる</a>
+     
+                <div style="foat: left;">
+                <%= render partial: "product_find_form" %>
               </div>
-              <div><p><%= link_to "新規登録", new_product_path %></p></div>
-              <div><p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p></div>
-              
+     
+              <div><%= "合計:#{a_price}" if current_user.id == 1 || 2 || 3 %>
 </table>
   </html>

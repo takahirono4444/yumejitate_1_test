@@ -1,21 +1,24 @@
 <div>
     <div>
-
-
 <h3>
-      <ul>
-      <li>
-      <FORM>
-<INPUT type="button" value="１：エラーを消す" onClick="">
+       <% if @product.errors.any? %>
+  <div>
+    <ul>
+    <li>
+    <% @product.errors.full_messages.each do |err| %>
+    <%= err %>
+    <% end %>
+  </li>
+      <% else %>
+      <li>登録が完了しました</li>
+    </ul>
+  </div>
+<% end %>
+  </h3>
+<h3>
 
-</FORM>
-  </li>
-  <li>
-        <FORM>
 <INPUT type="button" value="２：登録ページへ戻り修正する" onClick="history.back()">
-</FORM>
-  </li>
-  </ul>
+
       </h3>
       <h3>
       <a href="/">一覧へ戻る</a>

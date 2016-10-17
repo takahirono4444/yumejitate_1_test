@@ -1,4 +1,6 @@
-<title>夢仕立顧客管理一覧</title>
+
+
+<p><%= render partial: "title_form" %></p>
 <table class="table_design">
 <tr>
  <th>詳細</th>
@@ -158,13 +160,10 @@
 
     </tr>
     <% end %>
-     <%= form_tag('/finishs/search', method: :get) do %>
-     <input class="search__query" name="keyword" placeholder="会員番号検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
-                
-              <% end %>
-              <div>
-              <a href="/">一覧へもどる</a>
+                <div style="foat: left;">
+                <%= render partial: "finish_find_form" %>
               </div>
-              <div><p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p></div>
+
+              <div><%= "合計:#{a_price}" if current_user.id == 1 || 2 || 3 %></div>
               
 </table>
