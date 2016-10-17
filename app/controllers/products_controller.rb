@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     respond_to do |format|#csvとエクセルで出力する処理(エンコーディング未処理)
       format.html
       format.csv { send_data @products.to_csv }
-      format.xls { send_data @products.to_csv(col_sep: "\t")}
+      format.xls { send_data @products.to_csv(col_sep: "\t")}#.encode("Shift_JIS").encode(Encoding::Windows_31J, undef: :replace) }
       end
 
   end
