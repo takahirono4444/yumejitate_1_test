@@ -5,6 +5,66 @@ class Finish < ActiveRecord::Base
  has_many :users
 
 
+
+ #必須項目
+validates :member_id, presence: {:message => "「会員番号」は必須入力項目です。"}
+validates :name, presence: {:message => "「名前」が入力されていません。「名前」は必須入力項目です"}
+validates :first_day, presence: true, format: { with: /\A[!-~]+\z/i, :message => "「受注日」は必須入力項目です。「受注日」は半角で「2020/01/01」というように入力してください。"  }
+validates :shop, presence: {:message => "「受注場所」が入力されていません。「受注場所」は必須入力項目です"}
+
+
+#数字のみ
+validates :shitadori, numericality: { only_integer: true, :message => "「下取り」が間違っています。「下取り」数字のみ入力できます。", allow_blank: true }
+validates :price, numericality: { only_integer: true, :message => "「最終金額」が間違っています。「最終金額」数字のみ入力できます。", allow_blank: true }
+validates :uchikin, numericality: { only_integer: true, :message => "「内金」が間違っています。「内金」数字のみ入力できます。", allow_blank: true }
+
+
+#日付
+validates :sagyosyo_id, format: { with: /\A[!-~]+\z/i, :message => "「作業書番号」が間違っています。「作業書番号」は半角で入力してください。", allow_blank: true }
+validates :syohin_id, format: { with: /\A[!-~]+\z/i, :message => "「商品番号」が間違っています。「商品番号」は半角で入力してください。", allow_blank: true }
+validates :tel, format: { with: /\A[!-~]+\z/i, :message => "「電話番号」が間違っています。「電話番号」は半角で入力してください。", allow_blank: true }
+validates :email, format: { with: /\A[!-~]+\z/i, :message => "が間違っています。「email」は半角で入力してください。", allow_blank: true }
+validates :delivery_schedule, format: { with: /\A[!-~]+\z/i, :message => "「納期」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「納品日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :sub_shop_delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「本社→現場/品物到着日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :main_shop_delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「現場→本社/品物到着日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :re_product_main_shop_delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「再加工売場→本社/品物到着日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :re_product_sub_shop_delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「再加工本社→売場/品物到着日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :matsuya_tsuuban, format: { with: /\A[!-~]+\z/i, :message => "「通番-※松屋のみ」は半角で入力してください。", allow_blank: true }
+validates :product_first_day1, format: { with: /\A[!-~]+\z/i, :message => "「出し日1」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_schedule1, format: { with: /\A[!-~]+\z/i, :message => "「受取日1」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_day1, format: { with: /\A[!-~]+\z/i, :message => "「ライム納期1」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_first_day1, format: { with: /\A[!-~]+\z/i, :message => "「出し日2」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_schedule1, format: { with: /\A[!-~]+\z/i, :message => "「受取日2」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_day1, format: { with: /\A[!-~]+\z/i, :message => "「ライム納期2」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_first_day1, format: { with: /\A[!-~]+\z/i, :message => "「出し日3」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_schedule1, format: { with: /\A[!-~]+\z/i, :message => "「受取日3」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_day1, format: { with: /\A[!-~]+\z/i, :message => "「ライム納期3」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_first_day1, format: { with: /\A[!-~]+\z/i, :message => "「出し日4」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_schedule1, format: { with: /\A[!-~]+\z/i, :message => "「受取日4」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :product_delivery_day1, format: { with: /\A[!-~]+\z/i, :message => "「ライム納期4」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :pay_string, format: { with: /\A[!-~]+\z/i, :message => "「入金日」が間違っています。「入金日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+validates :uchikin_pay_string, format: { with: /\A[!-~]+\z/i, :message => "「内金入金日」が間違っています。「内金入金日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
+
+
+
+
+
+
+  def price=(value)
+    value.tr!('０-９', '0-9') if value.is_a?(String)
+    super(value)
+  end
+  def shitadori=(value)
+    value.tr!('０-９', '0-9') if value.is_a?(String)
+    super(value)
+  end
+  def uchikin=(value)
+    value.tr!('０-９', '0-9') if value.is_a?(String)
+    super(value)
+  end
+
+
 def self.to_csv(options = {})#csvとエクセルで出力する処理(エンコーディング未処理)
     CSV.generate(options) do |csv|
       csv << csv_column_names
