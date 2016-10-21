@@ -13,10 +13,12 @@
       </div>
 <div class="input_form">
       <%= f.label :作業書番号 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :sagyosyo_id %>
       </div>
 <div class="input_form">
       <%= f.label :商品番号 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :syohin_id %>
       </div>
 <div class="input_form_red">
@@ -40,10 +42,12 @@
       </div>
 <div class="input_form">
       <%= f.label :電話 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :tel %>
       </div>
 <div class="input_form">
       <%= f.label :メール %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :email %>
       </div>
 <div class="input_form">
@@ -72,32 +76,45 @@
       <%= f.label :"受注日＜first_day＞" %>
 <%= f.text_field :first_day %><%= f.label :"※必須" %>
       </div>
-<div class="input_form">
+<div class="input_form_red">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :納期 %>
-<%= f.text_field :delivery_schedule %>
+<%= f.text_field :delivery_schedule %><%= f.label :"※必須" %>
       </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :納品日 %>
 <%= f.text_field :delivery_string %>
       </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :店舗→加工仕分け所 %>
 <%= f.text_field :sub_shop_delivery_string %>
       </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :加工仕分け所→店舗 %>
 <%= f.text_field :main_shop_delivery_string %>
       </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :"店舗→加工仕分け所(再加工)" %>
 <%= f.text_field :re_product_sub_shop_delivery_string %>
       </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :"加工仕分け所→店舗(再加工)" %>
 <%= f.text_field :re_product_main_shop_delivery_string %>
       </div>
 <div class="input_form">
       <%= f.label :松屋通番 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :matsuya_tsuuban %>
       </div>
 <div class="input_form">
@@ -113,14 +130,20 @@
 <%= f.text_field :product_reason1 %>
       </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日1 %>
 <%= f.text_field :product_first_day1 %>
       </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期1 %>
 <%= f.text_field :product_delivery_schedule1 %>
       </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日1 %>
 <%= f.text_field :product_delivery_day1 %>
       </div>
@@ -133,14 +156,20 @@
 <%= f.text_field :product_reason2 %>
       </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日2 %>
 <%= f.text_field :product_first_day2 %>
       </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期2 %>
 <%= f.text_field :product_delivery_schedule2 %>
       </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日2 %>
 <%= f.text_field :product_delivery_day2 %>
             </div>
@@ -153,14 +182,20 @@
 <%= f.text_field :product_reason3 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日3 %>
 <%= f.text_field :product_first_day3 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期3 %>
 <%= f.text_field :product_delivery_schedule3 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日3 %>
 <%= f.text_field :product_delivery_day3 %>
             </div>
@@ -173,18 +208,26 @@
 <%= f.text_field :product_reason4 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日4 %>
 <%= f.text_field :product_first_day4 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期4 %>
 <%= f.text_field :product_delivery_schedule4 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日4 %>
 <%= f.text_field :product_delivery_day4 %>
             </div>
 <div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日4 %>
 <%= f.text_field :product_delivery_day4 %>
             </div>
@@ -210,14 +253,17 @@
             </div>
 <div class="input_form">
       <%= f.label :下取り金額 %>
+      <%= f.label :"必ず半角で入力すること!" %>
 <%= f.text_field :shitadori %>
             </div>
 <div class="input_form">
       <%= f.label :内金 %>
+      <%= f.label :"必ず半角で入力すること!" %>
 <%= f.text_field :uchikin %>
             </div>
 <div class="input_form">
       <%= f.label :最終金額 %>
+      <%= f.label :"必ず半角で入力すること!" %>
 <%= f.text_field :price %>
             </div>
 <div class="input_form">
@@ -225,10 +271,14 @@
 <%= f.text_area :free_space2, size: "40x10" %>
             </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :入金日 %>
 <%= f.text_field :pay_string %>
             </div>
 <div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :内金入金日 %>
 <%= f.text_field :uchikin_pay_string %>
             </div>
@@ -320,7 +370,6 @@
 <%= f.file_field :photo %>
       </div>
             <%= f.submit %>
-
 
 
      

@@ -6,161 +6,371 @@
 
       
 
-      <%= f.label :会員番号 %>
-<%= f.text_field :member_id %>
+<div class="input_form_red">
+      <%= f.label :"必ず半角で入力すること!" %>
+      <br>
+      <%= f.label :"会員番号＜member＞" %>
+      <%= f.text_field :member_id %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
       <%= f.label :作業書番号 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :sagyosyo_id %>
+      </div>
+<div class="input_form">
       <%= f.label :商品番号 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :syohin_id %>
-<%= f.label :受注場所 %>
-<%= f.text_field :shop %>
-      <%= f.label :名前 %>
-<%= f.text_field :name %>
+      </div>
+<div class="input_form_red">
+<%= f.label :"受注場所＜shop＞ ※必須"%>
+<br>
+<%= f.radio_button :shop, "MG" %> <%= f.label :"MG" %>
+<%= f.radio_button :shop, "YM" %> <%= f.label :"YM" %>
+<%= f.radio_button :shop, "YMW" %> <%= f.label :"YMW" %>
+<%= f.radio_button :shop, "AY" %> <%= f.label :"AY" %>
+<%= f.radio_button :shop, "AD" %> <%= f.label :"AD" %>
+<%= f.radio_button :shop, "LJH" %> <%= f.label :"LJH" %>
+<%= f.radio_button :shop, "その他" %> <%= f.label :"その他" %>
+      </div>
+<div class="input_form_red">
+      <%= f.label :"名前＜name＞" %>
+<%= f.text_field :name %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
       <%= f.label :ふりがな %>
 <%= f.text_field :name_rubi %>
+      </div>
+<div class="input_form">
       <%= f.label :電話 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :tel %>
+      </div>
+<div class="input_form">
       <%= f.label :メール %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :email %>
+      </div>
+<div class="input_form">
       <%= f.label :〒 %>
 <%= f.text_field :post_no %>
+      </div>
+<div class="input_form">
       <%= f.label :都道府県 %>
 <%= f.text_field :prefectures %>
+      </div>
+<div class="input_form">
       <%= f.label :住所1 %>
-<%= f.text_area :adress1, size: "30x20" %>
+<%= f.text_area :adress1, size: "40x5" %>
+      </div>
+<div class="input_form">
       <%= f.label :住所2 %>
-<%= f.text_area :adress2, size: "30x20" %>
+<%= f.text_area :adress2, size: "40x5" %>
+      </div>
+<div class="input_form">
       <%= f.label :備考欄 %>
-<%= f.text_area :free_space1, size: "30x20" %>
-      <%= f.label :受注日 %>
-<%= f.text_field :first_day %>
+<%= f.text_area :free_space1, size: "40x10" %>
+      </div>
+<div class="input_form_red">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
+      <%= f.label :"受注日＜first_day＞" %>
+<%= f.text_field :first_day %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form_red">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :納期 %>
-<%= f.text_field :delivery_schedule %>
+<%= f.text_field :delivery_schedule %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :納品日 %>
 <%= f.text_field :delivery_string %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :店舗→加工仕分け所 %>
 <%= f.text_field :sub_shop_delivery_string %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :加工仕分け所→店舗 %>
 <%= f.text_field :main_shop_delivery_string %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :"店舗→加工仕分け所(再加工)" %>
 <%= f.text_field :re_product_sub_shop_delivery_string %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :"加工仕分け所→店舗(再加工)" %>
 <%= f.text_field :re_product_main_shop_delivery_string %>
+      </div>
+<div class="input_form">
       <%= f.label :松屋通番 %>
+      <%= f.label :":必ず半角で入力すること!" %>
 <%= f.text_field :matsuya_tsuuban %>
+      </div>
+<div class="input_form">
       <%= f.label :特記事項 %>
 <%= f.text_field :special_topics %>
+      </div>
+<div class="input_form">
       <%= f.label :加工所1 %>
 <%= f.text_field :product_place1 %>
+      </div>
+<div class="input_form">
       <%= f.label :加工内容1 %>
 <%= f.text_field :product_reason1 %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日1 %>
 <%= f.text_field :product_first_day1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期1 %>
 <%= f.text_field :product_delivery_schedule1 %>
+      </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日1 %>
 <%= f.text_field :product_delivery_day1 %>
+      </div>
+<div class="input_form">
       <%= f.label :加工所2 %>
 <%= f.text_field :product_place2 %>
+      </div>
+<div class="input_form">
       <%= f.label :加工内容2 %>
 <%= f.text_field :product_reason2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日2 %>
 <%= f.text_field :product_first_day2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期2 %>
 <%= f.text_field :product_delivery_schedule2 %>
+      </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日2 %>
 <%= f.text_field :product_delivery_day2 %>
+            </div>
+<div class="input_form">
       <%= f.label :加工所3 %>
 <%= f.text_field :product_place3 %>
+            </div>
+<div class="input_form">
       <%= f.label :加工内容3 %>
 <%= f.text_field :product_reason3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日3 %>
 <%= f.text_field :product_first_day3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期3 %>
 <%= f.text_field :product_delivery_schedule3 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日3 %>
 <%= f.text_field :product_delivery_day3 %>
+            </div>
+<div class="input_form">
       <%= f.label :加工所4 %>
 <%= f.text_field :product_place4 %>
+            </div>
+<div class="input_form">
       <%= f.label :加工内容4 %>
 <%= f.text_field :product_reason4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :出し日4 %>
 <%= f.text_field :product_first_day4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム納期4 %>
 <%= f.text_field :product_delivery_schedule4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日4 %>
 <%= f.text_field :product_delivery_day4 %>
+            </div>
+<div class="input_form">
+      <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :ライム到着日4 %>
 <%= f.text_field :product_delivery_day4 %>
+            </div>
+<div class="input_form">
       <%= f.label :お預かり品 %>
 <%= f.text_field :luggage_goods %>
+            </div>
+<div class="input_form">
       <%= f.label :受注商品名 %>
 <%= f.text_field :product_name %>
+            </div>
+<div class="input_form">
       <%= f.label :デザインナンバー %>
 <%= f.text_field :design_no %>
+            </div>
+<div class="input_form">
       <%= f.label :受注分類 %>
 <%= f.text_field :product_category %>
+            </div>
+<div class="input_form">
       <%= f.label :商品の種類 %>
 <%= f.text_field :product_kind %>
+            </div>
+<div class="input_form">
       <%= f.label :下取り金額 %>
+      <%= f.label :"必ず半角で入力すること!" %>
 <%= f.text_field :shitadori %>
+            </div>
+<div class="input_form">
       <%= f.label :内金 %>
+      <%= f.label :"必ず半角で入力すること!" %>
 <%= f.text_field :uchikin %>
+            </div>
+<div class="input_form">
       <%= f.label :最終金額 %>
+      <%= f.label :"必ず半角で入力すること!" %>
 <%= f.text_field :price %>
+            </div>
+<div class="input_form">
       <%=f.label :備考欄2 %>
-<%= f.text_area :free_space2, size: "30x20" %>
+<%= f.text_area :free_space2, size: "40x10" %>
+            </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :入金日 %>
 <%= f.text_field :pay_string %>
+            </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
       <%= f.label :内金入金日 %>
 <%= f.text_field :uchikin_pay_string %>
+            </div>
+<div class="input_form">
       <%= f.label :担当者名 %>
 <%= f.text_field :staff_id %>
+            </div>
+<div class="input_form">
       <%= f.label :お客様名 %>
 <%= f.text_field :customer_name %>
+            </div>
+<div class="input_form">
       <%= f.label :お客様住所 %>
-<%= f.text_area :customer_adress, size: "30x20" %>
+<%= f.text_area :customer_adress, size: "40x5" %>
+            </div>
+<div class="input_form">
       <%= f.label :お客様ご連絡先 %>
 <%= f.text_field :customer_telephone %>
-<label><%= f.radio_button :next_expected, "1" %>次回の期待ができる方</label>
+            </div>
+<div class="input_form">
+<%= f.radio_button :next_expected, "できる" %><%= f.label :"次回の期待ができる方" %>
+      </div>
+<div class="input_form">
       <%=f.label :来店の理由 %>
-<%= f.text_area :visit_reason, size: "30x20" %>
+<%= f.text_area :visit_reason, size: "40x10" %>
+      </div>
+<div class="input_form">
       <%= f.label :検索キーワード %>
 <%= f.text_field :search_keywords %>
+      </div>
+<div class="input_form">
       <%= f.label :HPを見た日 %>
 <%= f.text_field :show_string_hp %>
+      </div>
+<div class="input_form">
       <%= f.label :ブラウザ %>
 <%= f.text_field :browser %>
+      </div>
+<div class="input_form">
       <%= f.label :端末の種類 %>
 <%= f.text_field :terminal_kind %>
+      </div>
+<div class="input_form">
       <%= f.label :HPの印象 %>
 <%= f.text_field :hp_impression %>
+      </div>
+<div class="input_form">
       <%= f.label :サンプルの価格 %>
 <%= f.text_field :sample_price %>
+      </div>
+<div class="input_form">
       <%= f.label :サンプルのデザイン %>
 <%= f.text_field :sample_design %>
+      </div>
+<div class="input_form">
       <%= f.label :夢仕立を選んだ理由 %>
 <%= f.text_field :reason_of_yumejitate %>
+      </div>
+<div class="input_form">
       <%= f.label :HPの気になった点 %>
 <%= f.text_field :bad_impression_hp %>
+      </div>
+<div class="input_form">
       <%= f.label :今後欲しいジュエリー %>
 <%= f.text_field :want_jewelry %>
+      </div>
+<div class="input_form">
       <%= f.label :掲載可 %>
 <%= f.text_field :publish_true %>
+      </div>
+<div class="input_form">
       <%= f.label :メール可 %>
 <%= f.text_field :contact_true %>
+      </div>
+<div class="input_form">
       <%= f.label :お客様のメールアドレス %>
 <%= f.text_field :customer_email %>
+      </div>
+<div class="input_form">
       <%= f.label :性別 %>
 <%= f.text_field :sex %>
+      </div>
+<div class="input_form">
       <%= f.label :年代 %>
 <%= f.text_field :age %>
-<%= f.label :出来上がり画像 %>
+      </div>
+<div class="input_form" >
+<%= f.label :画像 %>
 <%= f.file_field :photo %>
-
-
-      <%= f.submit %>
-
+      </div>
+            <%= f.submit %>
 
 
      
