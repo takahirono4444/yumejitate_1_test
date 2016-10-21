@@ -81,7 +81,7 @@ def create
 
 def show
   @product = Product.find(params[:id])
-  @pictures = @product.pictures
+  @pictures = @product.pictures if @product.pictures
   
 end
 

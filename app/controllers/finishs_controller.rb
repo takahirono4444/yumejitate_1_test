@@ -58,7 +58,7 @@ def find8
 
 def show
   @finish = Finish.find(params[:id])
-  @pictures = @finish.pictures
+  @pictures = @finish.pictures if @finish.pictures
   
 end
 
