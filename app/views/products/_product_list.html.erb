@@ -1,0 +1,99 @@
+<td><%= product.member_id %></td>
+      <td><%= product.sagyosyo_id %></td>
+      <td><%= product.syohin_id %></td>
+      <td><%= product.shop %>
+        <% if product.shop == "MG" %>
+        <%= image_tag "mg.jpg" %>
+        <% elsif product.shop == "YM" %>
+        <%= image_tag "ym.jpg" %>
+        <% elsif product.shop == "YMW" %>
+        <%= image_tag "ymw.jpg" %>
+        <% elsif product.shop == "AY" %>
+        <%= image_tag "ay.jpg" %>
+        <% elsif product.shop == "AD" %>
+        <%= image_tag "ad.jpg" %>
+        <% elsif product.shop == "LJH" %>
+        <%= image_tag "ljh.jpg" %>
+        <% else %>
+        <%= image_tag "ather.jpg" %>
+      <% end %>
+      </td>
+      <td><%= product.name %></td>
+      <td><%= product.name_rubi %></td>
+      <td><%= product.tel %></td>
+      <td><%= product.email %></td>
+      <td><%= product.post_no %></td>
+      <td><%= product.prefectures %></td>
+      <td><%= product.adress1 %></td>
+      <td><%= product.adress2 %></td>
+      <td><%= product.free_space1 %></td>
+      <td><%= product.first_day %></td>
+      <td><%= product.delivery_schedule %></td>
+      <td><%= product.delivery_string %></td>
+      <td><%= product.sub_shop_delivery_string %></td>
+      <td><%= product.main_shop_delivery_string %></td>
+      <td><%= product.re_product_sub_shop_delivery_string %></td>
+      <td><%= product.re_product_main_shop_delivery_string %></td>
+      <td><%= product.matsuya_tsuuban %></td>
+      <td><%= product.special_topics %></td>
+      <td><%= product.product_place1 %></td>
+      <td><%= product.product_reason1 %></td>
+      <td><%= product.product_first_day1 %></td>
+      <td><%= product.product_delivery_schedule1 %></td>
+      <td><%= product.product_delivery_day1 %></td>
+      <td><%= product.product_place2 %></td>
+      <td><%= product.product_reason2 %></td>
+      <td><%= product.product_first_day2 %></td>
+      <td><%= product.product_delivery_schedule2 %></td>
+      <td><%= product.product_delivery_day2 %></td>
+      <td><%= product.product_place3 %></td>
+      <td><%= product.product_reason3 %></td>
+      <td><%= product.product_first_day3 %></td>
+      <td><%= product.product_delivery_schedule3 %></td>
+      <td><%= product.product_delivery_day3 %></td>
+      <td><%= product.product_place4 %></td>
+      <td><%= product.product_reason4 %></td>
+      <td><%= product.product_first_day4 %></td>
+      <td><%= product.product_delivery_schedule4 %></td>
+      <td><%= product.product_delivery_day4 %></td>
+      <td><%= product.luggage_goods %></td>
+      <td><%= product.product_name %></td>
+      <td><%= product.design_no %></td>
+      <td><%= product.product_category %></td>
+      <td><%= product.product_kind %></td>
+      <td><%= product.shitadori %></td>
+      <td><%= product.uchikin %></td>
+      <td><%= product.price %></td>
+      <td><%= product.free_space2 %></td>
+      <td><%= product.pay_string %></td>
+      <td><%= product.uchikin_pay_string %></td>
+      <td><%= product.staff_id %></td>
+      <td><%= product.customer_name %></td>
+      <td><%= product.customer_adress %></td>
+      <td><%= product.customer_telephone %></td>
+      <td><%= product.next_expected %></td>
+      <td><%= product.visit_reason %></td>
+      <td><%= product.search_keywords %></td>
+      <td><%= product.show_string_hp %></td>
+      <td><%= product.browser %></td>
+      <td><%= product.terminal_kind %></td>
+      <td><%= product.hp_impression %></td>
+      <td><%= product.sample_price %></td>
+      <td><%= product.sample_design %></td>
+      <td><%= product.reason_of_yumejitate %></td>
+      <td><%= product.bad_impression_hp %></td>
+      <td><%= product.want_jewelry %></td>
+      <td><%= product.publish_true %></td>
+      <td><%= product.contact_true %></td>
+      <td><%= product.customer_email %></td>
+      <td><%= product.sex %></td>
+      <td><%= product.age %></td>
+      <td><%= product.user_id %></td>
+      <td><%= product.edit_staff_id %></td>
+           <% @pictures.each do |pic| %>
+           <% if product.id == pic.product_id %>
+      <td><%= image_tag (pic.photo(:thumb)) %></td>
+      <td><%= pic.photo_file_name %></td>
+      <td><%= pic.created_at %></td>
+      <% end %>
+      <% end %>
