@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022011356) do
+ActiveRecord::Schema.define(version: 20161022080323) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(version: 20161022011356) do
     t.string  "DM_true",                              limit: 255
     t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
+    t.string  "last_respons_result",                  limit: 255
+    t.string  "last_special_topics",                  limit: 255
     t.string  "product_id",                           limit: 255
     t.string  "user_id",                              limit: 255
     t.string  "edit_staff_id",                        limit: 255
@@ -117,8 +119,6 @@ ActiveRecord::Schema.define(version: 20161022011356) do
     t.string  "member_id",                            limit: 255
     t.string  "sagyosyo_id",                          limit: 255
     t.string  "syohin_id",                            limit: 255
-    t.string  "user_id",                              limit: 255
-    t.string  "edit_staff_id",                        limit: 255
     t.string  "name",                                 limit: 255
     t.string  "name_rubi",                            limit: 255
     t.string  "tel",                                  limit: 255
@@ -167,7 +167,7 @@ ActiveRecord::Schema.define(version: 20161022011356) do
     t.integer "shitadori",                            limit: 4
     t.integer "uchikin",                              limit: 4
     t.integer "price",                                limit: 4
-    t.string  "free_space2",                          limit: 255
+    t.text    "free_space2",                          limit: 65535
     t.string  "pay_string",                           limit: 255
     t.string  "uchikin_pay_string",                   limit: 255
     t.string  "staff_id",                             limit: 255
@@ -199,6 +199,8 @@ ActiveRecord::Schema.define(version: 20161022011356) do
     t.string  "DM_true",                              limit: 255
     t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
+    t.string  "last_respons_result",                  limit: 255
+    t.string  "last_special_topics",                  limit: 255
     t.string  "picture_id",                           limit: 255
   end
 
