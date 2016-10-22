@@ -21,6 +21,10 @@
                 <%= render partial: "product_find_form" %>
               </div>
      
-              <div><%= "合計:#{a_price}" if current_user.id == 1 || 2 || 3 %>
+              <div>
+              <% if current_user.id == (1 || 2 || 3) %>
+              <%= "合計:#{a_price}" %>
+                <% end %>
+              </div>
 </table>
   </html>
