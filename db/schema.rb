@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022080323) do
+ActiveRecord::Schema.define(version: 20161022083637) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20161022080323) do
     t.string  "adress2",                              limit: 255
     t.string  "free_space1",                          limit: 255
     t.string  "delete_box",                           limit: 255
-    t.string  "first_day",                            limit: 255
     t.string  "shop",                                 limit: 255
     t.string  "delivery_schedule",                    limit: 255
     t.string  "delivery_string",                      limit: 255
@@ -129,7 +128,6 @@ ActiveRecord::Schema.define(version: 20161022080323) do
     t.string  "adress2",                              limit: 255
     t.string  "free_space1",                          limit: 255
     t.string  "delete_box",                           limit: 255
-    t.string  "first_day",                            limit: 255
     t.string  "shop",                                 limit: 255
     t.string  "delivery_schedule",                    limit: 255
     t.string  "delivery_string",                      limit: 255
