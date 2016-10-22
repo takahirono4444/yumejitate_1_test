@@ -22,6 +22,30 @@
 <%= f.text_field :syohin_id %>
       </div>
 <div class="input_form_red">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
+      <%= f.label :"受注日＜first_day＞" %>
+<%= f.text_field :first_day %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form_red">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
+      <%= f.label :納期 %>
+<%= f.text_field :delivery_schedule %><%= f.label :"※必須" %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
+      <%= f.label :納品日 %>
+<%= f.text_field :delivery_string %>
+      </div>
+<div class="input_form">
+<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
+<br>
+      <%= f.label :入金日 %>
+<%= f.text_field :pay_string %>
+            </div>
+<div class="input_form_red">
 <%= f.label :"受注場所＜shop＞ ※必須"%>
 <br>
 <%= f.radio_button :shop, "MG" %> <%= f.label :"MG" %>
@@ -69,24 +93,6 @@
 <div class="input_form">
       <%= f.label :備考欄 %>
 <%= f.text_area :free_space1, size: "40x10" %>
-      </div>
-<div class="input_form_red">
-<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
-<br>
-      <%= f.label :"受注日＜first_day＞" %>
-<%= f.text_field :first_day %><%= f.label :"※必須" %>
-      </div>
-<div class="input_form_red">
-<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
-<br>
-      <%= f.label :納期 %>
-<%= f.text_field :delivery_schedule %><%= f.label :"※必須" %>
-      </div>
-<div class="input_form">
-<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
-<br>
-      <%= f.label :納品日 %>
-<%= f.text_field :delivery_string %>
       </div>
 <div class="input_form">
 <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
@@ -269,12 +275,6 @@
 <div class="input_form">
       <%=f.label :備考欄2 %>
 <%= f.text_area :free_space2, size: "40x10" %>
-            </div>
-<div class="input_form">
-<%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>
-<br>
-      <%= f.label :入金日 %>
-<%= f.text_field :pay_string %>
             </div>
 <div class="input_form">
 <%= f.label :"必ず半角でyyyy/mm/ddと入力すること!" %>

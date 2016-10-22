@@ -1,6 +1,10 @@
 <td><%= product.member_id %></td>
       <td><%= product.sagyosyo_id %></td>
       <td><%= product.syohin_id %></td>
+      <td><%= product.product_first_day1 %></td>
+      <td><%= product.product_delivery_schedule1 %></td>
+      <td><%= product.product_delivery_day1 %></td>
+      <td><%= product.pay_string %></td>
       <td><%= product.shop %>
         <% if product.shop == "MG" %>
         <%= image_tag "mg.jpg" %>
@@ -38,9 +42,6 @@
       <td><%= product.special_topics %></td>
       <td><%= product.product_place1 %></td>
       <td><%= product.product_reason1 %></td>
-      <td><%= product.product_first_day1 %></td>
-      <td><%= product.product_delivery_schedule1 %></td>
-      <td><%= product.product_delivery_day1 %></td>
       <td><%= product.product_place2 %></td>
       <td><%= product.product_reason2 %></td>
       <td><%= product.product_first_day2 %></td>
@@ -65,7 +66,6 @@
       <td><%= product.uchikin %></td>
       <td><%= product.price %></td>
       <td><%= product.free_space2 %></td>
-      <td><%= product.pay_string %></td>
       <td><%= product.uchikin_pay_string %></td>
       <td><%= product.staff_id %></td>
       <td><%= product.customer_name %></td>
