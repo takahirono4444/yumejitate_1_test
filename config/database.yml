@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: yumejitate0_development
+  database: yumejitate_1_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: yumejitate0_test
+  database: yumejitate_1_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: yumejitate0_production
-  username: yumejitate0
+  database: yumejitate_1_production
+  username: yumejitate_1
   password: <%= ENV['YUMEJITATE0_DATABASE_PASSWORD'] %>
