@@ -11,7 +11,7 @@
 <% @finishs.each do |finish| %>
  <tr>
  <td><%= render partial: "finish", locals: {finish: finish} %></td>
- <%= render partial: "finish_list", locals: {product: product} %>
+ <%= render partial: "finish_list", locals: {finish: product} %>
     </tr>
 
     <% a_price = a_price + finish.price if finish.price %>
