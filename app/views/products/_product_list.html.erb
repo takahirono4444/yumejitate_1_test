@@ -1,12 +1,12 @@
-<td><%= product.member_id %></td>
+     <td><%= product.member_id %></td>
       <td><%= product.sagyosyo_id %></td>
       <td><%= product.syohin_id %></td>
-      <td><%= product.product_first_day1 %></td>
-      <td><%= product.product_delivery_schedule1 %></td>
-      <td><%= product.product_delivery_day1 %></td>
+      <td><%= product.first_day %></td>
+      <td><%= product.delivery_schedule %></td>
+      <td><%= product.delivery_string %></td>
       <td><%= product.pay_string %></td>
       <td><%= product.shop %>
-        <% if product.shop == "MG" %>
+       <% if product.shop == "MG" %>
         <%= image_tag "mg.jpg" %>
         <% elsif product.shop == "YM" %>
         <%= image_tag "ym.jpg" %>
@@ -31,9 +31,6 @@
       <td><%= product.adress1 %></td>
       <td><%= product.adress2 %></td>
       <td><%= product.free_space1 %></td>
-      <td><%= product.first_day %></td>
-      <td><%= product.delivery_schedule %></td>
-      <td><%= product.delivery_string %></td>
       <td><%= product.sub_shop_delivery_string %></td>
       <td><%= product.main_shop_delivery_string %></td>
       <td><%= product.re_product_sub_shop_delivery_string %></td>
@@ -42,6 +39,9 @@
       <td><%= product.special_topics %></td>
       <td><%= product.product_place1 %></td>
       <td><%= product.product_reason1 %></td>
+      <td><%= product.product_first_day1 %></td>
+      <td><%= product.product_delivery_schedule1 %></td>
+      <td><%= product.product_delivery_day1 %></td>
       <td><%= product.product_place2 %></td>
       <td><%= product.product_reason2 %></td>
       <td><%= product.product_first_day2 %></td>
@@ -90,10 +90,11 @@
       <td><%= product.age %></td>
       <td><%= product.user_id %></td>
       <td><%= product.edit_staff_id %></td>
-           <% @pictures.each do |pic| %>
-           <% if product.id == pic.product_id %>
-      <td><%= image_tag (pic.photo(:thumb)) %></td>
+            <% @pictures.each do |pic| %>
+      <% if product.id == pic.product_id %>
+      <td><%= image_tag(pic.photo(:shumb)) %></td>
       <td><%= pic.photo_file_name %></td>
       <td><%= pic.created_at %></td>
+
       <% end %>
       <% end %>
