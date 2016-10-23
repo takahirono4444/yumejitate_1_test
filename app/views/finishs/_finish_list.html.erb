@@ -5,7 +5,23 @@
       <td><%= finish.delivery_schedule %></td>
       <td><%= finish.delivery_string %></td>
       <td><%= finish.pay_string %></td>
-      <td><%= finish.shop %></td>
+      <td><%= finish.shop %>
+       <% if finish.shop == "MG" %>
+        <%= image_tag "mg.jpg" %>
+        <% elsif finish.shop == "YM" %>
+        <%= image_tag "ym.jpg" %>
+        <% elsif finish.shop == "YMW" %>
+        <%= image_tag "ymw.jpg" %>
+        <% elsif finish.shop == "AY" %>
+        <%= image_tag "ay.jpg" %>
+        <% elsif finish.shop == "AD" %>
+        <%= image_tag "ad.jpg" %>
+        <% elsif finish.shop == "LJH" %>
+        <%= image_tag "ljh.jpg" %>
+        <% else %>
+        <%= image_tag "ather.jpg" %>
+      <% end %>
+      </td>
       <td><%= finish.name %></td>
       <td><%= finish.name_rubi %></td>
       <td><%= finish.tel %></td>
