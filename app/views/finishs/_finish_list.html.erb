@@ -90,11 +90,3 @@
       <td><%= finish.age %></td>
       <td><%= finish.user_id %></td>
       <td><%= finish.edit_staff_id %></td>
-            <% @pictures.each do |pic| %>
-      <% if finish.id == pic.finish_id %>
-      <td><%= image_tag(pic.photo(:shumb)) %></td>
-      <td><%= pic.photo_file_name %></td>
-      <td><%= pic.created_at %></td>
-
-      <% end %>
-      <% end %>
