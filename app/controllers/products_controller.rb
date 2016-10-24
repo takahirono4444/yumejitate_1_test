@@ -63,7 +63,7 @@ def find8
   def new
     @product = Product.new
     Picture.new
-    @finish = Finish.new
+    @product = Finish.new
     @product.errors.clear
   end
 
@@ -73,17 +73,23 @@ def create
   @picture = @product
   @picture = @finish
   @picture = Picture.create(pictures_params)
+
+  @product.save
+  @finish.save
+  @picture.save
  #   Product.where(member_id: params[:member_id]).first_or_initialize
     end
 
 
 
 
+
 def show
   @product = Product.find(params[:id])
+
   @pictures = @product.pictures if @product.pictures
-  
-end
+
+  end
 
 def destroy
   product = Product.find(params[:id])
@@ -105,6 +111,7 @@ def update
   @picture = Picture.create(pictures_params)
 
    @product.update(product_params_2)
+   @finish.update(product_params_2)
   end
 
 
@@ -121,7 +128,11 @@ def update
   end
 
   def finish_params
-    params.permit(:member_id, :sagyosyo_id, :syohin_id, :shop, :name, :name_rubi, :tel, :email, :post_no, :prefectures, :adress1, :adress2, :free_space1, :first_day, :delivery_schedule, :delivery_string, :sub_shop_delivery_string, :main_shop_delivery_string, :re_product_sub_shop_delivery_string, :re_product_main_shop_delivery_string, :matsuya_tsuuban, :special_topics, :product_place1, :product_reason1, :product_first_day1, :product_delivery_schedule1, :product_delivery_day1, :product_place2, :product_reason2, :product_first_day2, :product_delivery_schedule2, :product_delivery_day2, :product_place3, :product_reason3, :product_first_day3, :product_delivery_schedule3, :product_delivery_day3, :product_place4, :product_reason4, :product_first_day4, :product_delivery_schedule4, :product_delivery_day4, :luggage_goods, :product_name, :design_no, :product_category, :product_kind, :shitadori, :uchikin, :price, :free_space2, :pay_string, :uchikin_pay_string, :staff_id, :customer_name, :customer_adress, :customer_telephone, :next_expected, :visit_reason, :search_keywords, :show_string_hp, :browser, :terminal_kind, :hp_impression, :sample_price, :sample_design, :reason_of_yumejitate, :bad_impression_hp, :want_jewelry, :publish_true, :contact_true, :customer_email, :sex, :age).merge(user_id: current_user.nickname)
+    params.require(:product).permit(:member_id, :sagyosyo_id, :syohin_id, :shop, :name, :name_rubi, :tel, :email, :post_no, :prefectures, :adress1, :adress2, :free_space1, :first_day, :delivery_schedule, :delivery_string, :sub_shop_delivery_string, :main_shop_delivery_string, :re_product_sub_shop_delivery_string, :re_product_main_shop_delivery_string, :matsuya_tsuuban, :special_topics, :product_place1, :product_reason1, :product_first_day1, :product_delivery_schedule1, :product_delivery_day1, :product_place2, :product_reason2, :product_first_day2, :product_delivery_schedule2, :product_delivery_day2, :product_place3, :product_reason3, :product_first_day3, :product_delivery_schedule3, :product_delivery_day3, :product_place4, :product_reason4, :product_first_day4, :product_delivery_schedule4, :product_delivery_day4, :luggage_goods, :product_name, :design_no, :product_category, :product_kind, :shitadori, :uchikin, :price, :free_space2, :pay_string, :uchikin_pay_string, :staff_id, :customer_name, :customer_adress, :customer_telephone, :next_expected, :visit_reason, :search_keywords, :show_string_hp, :browser, :terminal_kind, :hp_impression, :sample_price, :sample_design, :reason_of_yumejitate, :bad_impression_hp, :want_jewelry, :publish_true, :contact_true, :customer_email, :sex, :age).merge(user_id: current_user.nickname)
+  end
+
+  def finish_params_2
+    params.require(:product).permit(:member_id, :sagyosyo_id, :syohin_id, :shop, :name, :name_rubi, :tel, :email, :post_no, :prefectures, :adress1, :adress2, :free_space1, :first_day, :delivery_schedule, :delivery_string, :sub_shop_delivery_string, :main_shop_delivery_string, :re_product_sub_shop_delivery_string, :re_product_main_shop_delivery_string, :matsuya_tsuuban, :special_topics, :product_place1, :product_reason1, :product_first_day1, :product_delivery_schedule1, :product_delivery_day1, :product_place2, :product_reason2, :product_first_day2, :product_delivery_schedule2, :product_delivery_day2, :product_place3, :product_reason3, :product_first_day3, :product_delivery_schedule3, :product_delivery_day3, :product_place4, :product_reason4, :product_first_day4, :product_delivery_schedule4, :product_delivery_day4, :luggage_goods, :product_name, :design_no, :product_category, :product_kind, :shitadori, :uchikin, :price, :free_space2, :pay_string, :uchikin_pay_string, :staff_id, :customer_name, :customer_adress, :customer_telephone, :next_expected, :visit_reason, :search_keywords, :show_string_hp, :browser, :terminal_kind, :hp_impression, :sample_price, :sample_design, :reason_of_yumejitate, :bad_impression_hp, :want_jewelry, :publish_true, :contact_true, :customer_email, :sex, :age).merge(edit_staff_id: current_user.nickname)
   end
 
 

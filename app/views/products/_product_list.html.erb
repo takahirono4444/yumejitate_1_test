@@ -92,7 +92,7 @@
       <td><%= product.edit_staff_id %></td>
             <% @pictures.each do |pic| %>
       <% if product.id == pic.product_id %>
-      <td><%= image_tag(pic.photo(:shumb)) %></td>
+      <td><%= image_tag(pic.photo(:thumb)) %></td>
       <td><%= pic.photo_file_name %></td>
       <td><%= pic.created_at %></td>
 
