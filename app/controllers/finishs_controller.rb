@@ -78,9 +78,8 @@ end
 def update
   @finish = Finish.find(params[:id])
   @picture = @finish
-  @picture = Picture.create(picture_params)
-  #if tweet.user_id == current_user.id
-   @finish.update(finish_params_2)
+  @picture = Picture.create(pictures_params)
+  @finish.update(finish_params_2)
   end
 
 
@@ -95,7 +94,7 @@ def update
   end
 
   def pictures_params
-    params.require(:product).permit(:photo).merge(finish_id: @finish.id)
+    params.require(:finish).permit(:photo).merge(finish_id: @finish.id)
   end
 
  #並び替えの設定
