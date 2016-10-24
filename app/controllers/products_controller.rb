@@ -63,7 +63,7 @@ def find8
   def new
     @product = Product.new
     Picture.new
-    @product = Finish.new
+    Finish.new
     @product.errors.clear
   end
 
