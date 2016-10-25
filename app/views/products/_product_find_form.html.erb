@@ -10,7 +10,7 @@
                 <% end %>
 
      <%= form_tag("/products/search", method: :get) do %>
-                <input class="search__query" name="keyword" placeholder="検索" type="text" value=""><input type="submit" value="検索">
+                <input class="search__query" name="keyword" placeholder="フリーワード検索" type="text" value=""><input type="submit" value="フリーワード検索">
                 <% end %>
 
   <%= form_tag("/products/find", method: :get) do %>
@@ -18,7 +18,7 @@
                 受注日検索　　　　　　　　　：
                 <input placeholder="0000/00/00と半角で入力" type="text" name="first_day_from">〜
                 <input placeholder="0000/00/00と半角で入力" type="text" name="first_day_to">
-                <input type="submit" value="日付検索">
+                <input type="submit" value="受注日検索">
               </p>
               <% end %>
               <%= form_tag("/products/find2", method: :get) do %>
@@ -26,7 +26,7 @@
                 入金日検索　　　　　　　　　：
       <input placeholder="0000/00/00と半角で入力" type="text" name="pay_string_from">〜
       <input placeholder="0000/00/00と半角で入力" type="text" name="pay_string_to">
-           <input type="submit" value="日付検索">
+           <input type="submit" value="入金日検索">
     </p>
     <% end %>
     <%= form_tag("/products/find3", method: :get) do %>
@@ -35,7 +35,7 @@
                 納品日検索　　　　　　　　　：
       <input placeholder="0000/00/00と半角で入力" type="text" name="delivery_string_from">〜
       <input placeholder="0000/00/00と半角で入力" type="text" name="delivery_string_to">
-           <input type="submit" value="日付検索">
+           <input type="submit" value="納品日検索">
     </p>
     <% end %>
     <%= form_tag("/products/find4", method: :get) do %>
@@ -44,7 +44,7 @@
                 納品予定日検索　　　　　　　：
                 <input placeholder="0000/00/00と半角で入力" type="text" name="delivery_schedule_from">〜
                 <input placeholder="0000/00/00と半角で入力" type="text" name="delivery_schedule_to">
-                     <input type="submit" value="日付検索">
+                     <input type="submit" value="納期検索">
               </p>
               <% end %>
               <%= form_tag("/products/find5", method: :get) do %>
@@ -52,7 +52,7 @@
                 加工先1ライム到着予定日検索：
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule1_from">〜
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule1_to">
-          <input type="submit" value="日付検索">
+          <input type="submit" value="加工1検索">
      </p>
      <% end %>
      <%= form_tag("/products/find6", method: :get) do %>
@@ -60,7 +60,7 @@
                 加工先2ライム到着予定日検索：
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule2_from">〜
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule2_to">
-          <input type="submit" value="日付検索">
+          <input type="submit" value="加工2検索">
           </p>
           <% end %>
           <%= form_tag("/products/find7", method: :get) do %>
@@ -68,7 +68,7 @@
                 加工先3ライム到着予定日検索：
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule3_from">〜
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule3_to">
-          <input type="submit" value="日付検索">
+          <input type="submit" value="加工3検索">
           </p>
           <% end %>
           <%= form_tag("/products/find8", method: :get) do %>
@@ -76,7 +76,7 @@
                 加工先4ライム到着予定日検索：
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule4_from">〜
      <input placeholder="0000/00/00と半角で入力" type="text" name="product_delivery_schedule4_to">
-          <input type="submit" value="日付検索">
+          <input type="submit" value="加工4検索">
      </p>
 <% end %>
 
