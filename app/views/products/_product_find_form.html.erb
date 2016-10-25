@@ -5,7 +5,7 @@
   |
   <%= link_to "Excel", products_path(format: "xls") %>
 </p>
-<p>検索ボタンを押しても反応がない場合は、一度ページを更新してください</p>
+<p>※検索ボタンを押しても反応がない場合は、一度ページを更新してください</p>
 <%= form_tag("/products/search1", method: :get) do %>
                 <input class="search__query" name="keyword" placeholder="会員番号検索" type="text" value=""><input type="submit" value="会員番号検索">
                 <% end %>
@@ -85,8 +85,8 @@
    
  
     
-  <div><p><%= link_to "現行一覧", products_path %></p></div>
-  <div><p><%= link_to "過去一覧", finishs_path %></p></div>
-              <div><p><%= link_to "新規登録", new_product_path %></p></div>
-              <div><p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p></div>
+  <div class="link_to_page"><p><%= link_to "現行一覧", products_path %></p></div>
+  <div class="link_to_page"><p><%= link_to "過去一覧", finishs_path %></p></div>
+              <div class="link_to_page"><p><%= link_to "新規登録", new_product_path %></p></div>
+              <div class="link_to_page"><p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p></div>
 </div>              
