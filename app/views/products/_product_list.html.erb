@@ -1,11 +1,11 @@
-     <td><%= product.member_id %></td>
-      <td><%= product.sagyosyo_id %></td>
-      <td><%= product.syohin_id %></td>
-      <td><%= product.first_day %></td>
-      <td><%= product.delivery_schedule %></td>
-      <td><%= product.delivery_string %></td>
-      <td><%= product.pay_string %></td>
-      <td><%= product.shop %>
+     <td><div class="list_view"><%= product.member_id %></div></td>
+      <td><div class="list_view"><%= product.sagyosyo_id %></div></td>
+      <td><div class="list_view"><%= product.syohin_id %></div></td>
+      <td><div class="list_view"><%= product.first_day %></div></td>
+      <td><div class="list_view"><%= product.delivery_schedule %></div></td>
+      <td><div class="list_view"><%= product.delivery_string %></div></td>
+      <td><div class="list_view"><%= product.pay_string %></div></td>
+      <td><div class="list_view"><%= product.shop %>
        <% if product.shop == "MG" %>
         <%= image_tag "mg.jpg" %>
         <% elsif product.shop == "YM" %>
@@ -21,72 +21,72 @@
         <% else %>
         <%= image_tag "ather.jpg" %>
       <% end %>
-      </td>
-      <td><%= product.name %></td>
-      <td><%= product.name_rubi %></td>
-      <td><%= product.tel %></td>
-      <td><%= product.email %></td>
-      <td><%= product.post_no %></td>
-      <td><%= product.prefectures %></td>
-      <td><%= product.adress1 %></td>
-      <td><%= product.adress2 %></td>
-      <td><%= product.free_space1 %></td>
-      <td><%= product.sub_shop_delivery_string %></td>
-      <td><%= product.main_shop_delivery_string %></td>
-      <td><%= product.re_product_sub_shop_delivery_string %></td>
-      <td><%= product.re_product_main_shop_delivery_string %></td>
-      <td><%= product.matsuya_tsuuban %></td>
-      <td><%= product.special_topics %></td>
-      <td><%= product.product_place1 %></td>
-      <td><%= product.product_reason1 %></td>
-      <td><%= product.product_first_day1 %></td>
-      <td><%= product.product_delivery_schedule1 %></td>
-      <td><%= product.product_delivery_day1 %></td>
-      <td><%= product.product_place2 %></td>
-      <td><%= product.product_reason2 %></td>
-      <td><%= product.product_first_day2 %></td>
-      <td><%= product.product_delivery_schedule2 %></td>
-      <td><%= product.product_delivery_day2 %></td>
-      <td><%= product.product_place3 %></td>
-      <td><%= product.product_reason3 %></td>
-      <td><%= product.product_first_day3 %></td>
-      <td><%= product.product_delivery_schedule3 %></td>
-      <td><%= product.product_delivery_day3 %></td>
-      <td><%= product.product_place4 %></td>
-      <td><%= product.product_reason4 %></td>
-      <td><%= product.product_first_day4 %></td>
-      <td><%= product.product_delivery_schedule4 %></td>
-      <td><%= product.product_delivery_day4 %></td>
-      <td><%= product.luggage_goods %></td>
-      <td><%= product.product_name %></td>
-      <td><%= product.design_no %></td>
-      <td><%= product.product_category %></td>
-      <td><%= product.product_kind %></td>
-      <td><%= product.shitadori %></td>
-      <td><%= product.uchikin %></td>
-      <td><%= product.price %></td>
-      <td><%= product.free_space2 %></td>
-      <td><%= product.uchikin_pay_string %></td>
-      <td><%= product.staff_id %></td>
-      <td><%= product.customer_name %></td>
-      <td><%= product.customer_adress %></td>
-      <td><%= product.customer_telephone %></td>
-      <td><%= product.next_expected %></td>
-      <td><%= product.visit_reason %></td>
-      <td><%= product.search_keywords %></td>
-      <td><%= product.show_string_hp %></td>
-      <td><%= product.browser %></td>
-      <td><%= product.terminal_kind %></td>
-      <td><%= product.hp_impression %></td>
-      <td><%= product.sample_price %></td>
-      <td><%= product.sample_design %></td>
-      <td><%= product.reason_of_yumejitate %></td>
-      <td><%= product.bad_impression_hp %></td>
-      <td><%= product.want_jewelry %></td>
-      <td><%= product.publish_true %></td>
-      <td><%= product.contact_true %></td>
-      <td><%= product.customer_email %></td>
-      <td><%= product.sex %></td>
-      <td><%= product.age %></td>
-      <td><%= product.user_id %></td>
-      <td><%= product.edit_staff_id %></td>
+      </div></td>
+      <td><div class="list_view"><%= product.name %></div></td>
+      <td><div class="list_view"><%= product.name_rubi %></div></td>
+      <td><div class="list_view"><%= product.tel %></div></td>
+      <td><div class="list_view"><%= product.email %></div></td>
+      <td><div class="list_view"><%= product.post_no %></div></td>
+      <td><div class="list_view"><%= product.prefectures %></div></td>
+      <td><div class="list_view"><%= product.adress1 %></div></td>
+      <td><div class="list_view"><%= product.adress2 %></div></td>
+      <td><div class="list_view"><%= product.free_space1 %></div></td>
+      <td><div class="list_view"><%= product.sub_shop_delivery_string %></div></td>
+      <td><div class="list_view"><%= product.main_shop_delivery_string %></div></td>
+      <td><div class="list_view"><%= product.re_product_sub_shop_delivery_string %></div></td>
+      <td><div class="list_view"><%= product.re_product_main_shop_delivery_string %></div></td>
+      <td><div class="list_view"><%= product.matsuya_tsuuban %></div></td>
+      <td><div class="list_view"><%= product.special_topics %></div></td>
+      <td><div class="list_view"><%= product.product_place1 %></div></td>
+      <td><div class="list_view"><%= product.product_reason1 %></div></td>
+      <td><div class="list_view"><%= product.product_first_day1 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_schedule1 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_day1 %></div></td>
+      <td><div class="list_view"><%= product.product_place2 %></div></td>
+      <td><div class="list_view"><%= product.product_reason2 %></div></td>
+      <td><div class="list_view"><%= product.product_first_day2 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_schedule2 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_day2 %></div></td>
+      <td><div class="list_view"><%= product.product_place3 %></div></td>
+      <td><div class="list_view"><%= product.product_reason3 %></div></td>
+      <td><div class="list_view"><%= product.product_first_day3 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_schedule3 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_day3 %></div></td>
+      <td><div class="list_view"><%= product.product_place4 %></div></td>
+      <td><div class="list_view"><%= product.product_reason4 %></div></td>
+      <td><div class="list_view"><%= product.product_first_day4 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_schedule4 %></div></td>
+      <td><div class="list_view"><%= product.product_delivery_day4 %></div></td>
+      <td><div class="list_view"><%= product.luggage_goods %></div></td>
+      <td><div class="list_view"><%= product.product_name %></div></td>
+      <td><div class="list_view"><%= product.design_no %></div></td>
+      <td><div class="list_view"><%= product.product_category %></div></td>
+      <td><div class="list_view"><%= product.product_kind %></div></td>
+      <td><div class="list_view"><%= product.shitadori %></div></td>
+      <td><div class="list_view"><%= product.uchikin %></div></td>
+      <td><div class="list_view"><%= product.price %></div></td>
+      <td><div class="list_view"><%= product.free_space2 %></div></td>
+      <td><div class="list_view"><%= product.uchikin_pay_string %></div></td>
+      <td><div class="list_view"><%= product.staff_id %></div></td>
+      <td><div class="list_view"><%= product.customer_name %></div></td>
+      <td><div class="list_view"><%= product.customer_adress %></div></td>
+      <td><div class="list_view"><%= product.customer_telephone %></div></td>
+      <td><div class="list_view"><%= product.next_expected %></div></td>
+      <td><div class="list_view"><%= product.visit_reason %></div></td>
+      <td><div class="list_view"><%= product.search_keywords %></div></td>
+      <td><div class="list_view"><%= product.show_string_hp %></div></td>
+      <td><div class="list_view"><%= product.browser %></div></td>
+      <td><div class="list_view"><%= product.terminal_kind %></div></td>
+      <td><div class="list_view"><%= product.hp_impression %></div></td>
+      <td><div class="list_view"><%= product.sample_price %></div></td>
+      <td><div class="list_view"><%= product.sample_design %></div></td>
+      <td><div class="list_view"><%= product.reason_of_yumejitate %></div></td>
+      <td><div class="list_view"><%= product.bad_impression_hp %></div></td>
+      <td><div class="list_view"><%= product.want_jewelry %></div></td>
+      <td><div class="list_view"><%= product.publish_true %></div></td>
+      <td><div class="list_view"><%= product.contact_true %></div></td>
+      <td><div class="list_view"><%= product.customer_email %></div></td>
+      <td><div class="list_view"><%= product.sex %></div></td>
+      <td><div class="list_view"><%= product.age %></div></td>
+      <td><div class="list_view"><%= product.user_id %></div></td>
+      <td><div class="list_view"><%= product.edit_staff_id %></div></td>
