@@ -5,7 +5,7 @@
   |
   <%= link_to "Excel", products_path(format: "xls") %>
 </p>
-
+<p>検索ボタンを押しても反応がない場合は、一度ページを更新してください</p>
 <%= form_tag("/finishs/search1", method: :get) do %>
                 <input class="search__query" name="keyword" placeholder="会員番号検索" type="text" value=""><input type="submit" value="会員番号検索">
                 <% end %>
