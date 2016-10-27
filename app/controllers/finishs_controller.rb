@@ -50,7 +50,7 @@ def find8
   end
 
   def search1
-  @finish = Fnish.where("member_id LIKE(?)", "%#{params[:keyword]}%").limit(1000)
+  @finish = Finish.where("member_id LIKE(?)", "%#{params[:keyword]}%").limit(1000)
   end
 
 
