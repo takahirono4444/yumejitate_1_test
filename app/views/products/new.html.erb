@@ -54,6 +54,7 @@
 <%= f.radio_button :shop, "AY" %> <%= f.label :"AY" %>
 <%= f.radio_button :shop, "AD" %> <%= f.label :"AD" %>
 <%= f.radio_button :shop, "LJH" %> <%= f.label :"LJH" %>
+<%= f.radio_button :shop, "KT" %> <%= f.label :"KT" %>
 <%= f.radio_button :shop, "その他" %> <%= f.label :"その他" %>
       </div>
 <div class="input_form_red">
@@ -300,6 +301,7 @@
             </div>
 <div class="input_form">
 <%= f.radio_button :next_expected, "できる" %><%= f.label :"次回の期待ができる方" %>
+<%= f.radio_button :next_expected, "わからない" %><%= f.label :"わからない" %>
       </div>
 <div class="input_form">
       <%=f.label :来店の理由 %>
@@ -311,27 +313,38 @@
       </div>
 <div class="input_form">
       <%= f.label :HPを見た日 %>
-<%= f.text_field :show_string_hp %>
+<%= f.text_field :show_string_hp %>日前
       </div>
 <div class="input_form">
-      <%= f.label :ブラウザ %>
-<%= f.text_field :browser %>
+      <%= f.label :"ブラウザ：" %>
+<%= f.radio_button :browser, "google" %> <%= f.label :"google" %>
+<%= f.radio_button :browser, "yahoo" %> <%= f.label :"yahoo" %>
+<%= f.radio_button :browser, "その他" %> <%= f.label :"その他" %>
       </div>
 <div class="input_form">
-      <%= f.label :端末の種類 %>
-<%= f.text_field :terminal_kind %>
+      <%= f.label :"端末の種類:" %>
+<%= f.radio_button :terminal_kind, "PC" %> <%= f.label :"PC" %>
+<%= f.radio_button :terminal_kind, "スマートフォン" %> <%= f.label :"スマートフォン" %>
+<%= f.radio_button :terminal_kind, "iphone" %> <%= f.label :"iphone" %>
+<%= f.radio_button :terminal_kind, "タブレット" %> <%= f.label :"タブレット" %>
+<%= f.radio_button :terminal_kind, "その他" %> <%= f.label :"その他" %>
       </div>
 <div class="input_form">
       <%= f.label :HPの印象 %>
 <%= f.text_field :hp_impression %>
       </div>
 <div class="input_form">
-      <%= f.label :サンプルの価格 %>
-<%= f.text_field :sample_price %>
+      <%= f.label :"サンプルの価格：" %>
+<%= f.radio_button :sample_price, "高い" %> <%= f.label :"高い" %>
+<%= f.radio_button :sample_price, "安い" %> <%= f.label :"安い" %>
+<%= f.radio_button :sample_price, "適正" %> <%= f.label :"適正" %>
+<%= f.radio_button :sample_price, "その他" %> <%= f.label :"その他" %>
       </div>
 <div class="input_form">
-      <%= f.label :サンプルのデザイン %>
-<%= f.text_field :sample_design %>
+      <%= f.label :"サンプルのデザイン：" %>
+<%= f.radio_button :sample_design, "多い" %> <%= f.label :"多い" %>
+<%= f.radio_button :sample_design, "少ない" %> <%= f.label :"少ない" %>
+<%= f.radio_button :sample_design, "わからない" %> <%= f.label :"わからない" %>
       </div>
 <div class="input_form">
       <%= f.label :夢仕立を選んだ理由 %>
@@ -346,34 +359,47 @@
 <%= f.text_field :want_jewelry %>
       </div>
 <div class="input_form">
-      <%= f.label :掲載可 %>
-<%= f.text_field :publish_true %>
+      <%= f.label :"掲載可：" %>
+<%= f.radio_button :publish_true, "掲載可" %> <%= f.label :"可" %>
+<%= f.radio_button :publish_true, "掲載不可" %> <%= f.label :"不可" %>
+<%= f.radio_button :publish_true, "わからない" %> <%= f.label :"わからない" %>
       </div>
 <div class="input_form">
-      <%= f.label :メール可 %>
-<%= f.text_field :contact_true %>
+      <%= f.label :"メール可：" %>
+<%= f.radio_button :contact_true, "メール可" %> <%= f.label :"可" %>
+<%= f.radio_button :contact_true, "メール不可" %> <%= f.label :"不可" %>
+<%= f.radio_button :contact_true, "わからない" %> <%= f.label :"わからない" %>
       </div>
 <div class="input_form">
       <%= f.label :お客様のメールアドレス %>
 <%= f.text_field :customer_email %>
       </div>
 <div class="input_form">
-      <%= f.label :性別 %>
-<%= f.text_field :sex %>
+      <%= f.label :"性別：" %>
+<%= f.radio_button :sex, "女性" %> <%= f.label :"女性" %>
+<%= f.radio_button :sex, "男性" %> <%= f.label :"男性" %>
+<%= f.radio_button :sex, "カップル" %> <%= f.label :"カップル" %>
+<%= f.radio_button :sex, "ご夫婦" %> <%= f.label :"カップル" %>
+<%= f.radio_button :sex, "親子(子)" %> <%= f.label :"親子(子)" %>
+<%= f.radio_button :sex, "親子(親)" %> <%= f.label :"親子(親)" %>
+<%= f.radio_button :sex, "ご家族" %> <%= f.label :"ご家族" %>
+<%= f.radio_button :sex, "ご友人" %> <%= f.label :"ご友人" %>
+<%= f.radio_button :sex, "母・娘" %> <%= f.label :"母・娘" %>
+<%= f.radio_button :sex, "その他" %> <%= f.label :"その他" %>
       </div>
 <div class="input_form">
       <%= f.label :年代 %>
-<%= f.text_field :age %>
+<%= f.text_field :age %>代
       </div>
 <div class="input_form" >
 <%= f.label :画像 %>
 <%= f.file_field :photo %>
       </div>
+
             <%= f.submit %>
 
 
 
-     
 
 
     <% end %>
