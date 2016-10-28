@@ -4,9 +4,10 @@ class Finish < ActiveRecord::Base
   has_many :pictures
  has_many :users
 
+ validates_uniqueness_of :member_id
 
 
- #必須項目
+#必須項目
 validates :member_id, presence: {:message => "「会員番号」は必須入力項目です。"}
 validates :name, presence: {:message => "「名前」が入力されていません。「名前」は必須入力項目です"}
 validates :first_day, presence: true, format: { with: /\A[!-~]+\z/i, :message => "「受注日」は必須入力項目です。「受注日」は半角で「2020/01/01」というように入力してください。"  }
@@ -25,6 +26,7 @@ validates :sagyosyo_id, format: { with: /\A[!-~]+\z/i, :message => "「作業書
 validates :syohin_id, format: { with: /\A[!-~]+\z/i, :message => "「商品番号」が間違っています。「商品番号」は半角で入力してください。", allow_blank: true }
 validates :tel, format: { with: /\A[!-~]+\z/i, :message => "「電話番号」が間違っています。「電話番号」は半角で入力してください。", allow_blank: true }
 validates :email, format: { with: /\A[!-~]+\z/i, :message => "が間違っています。「email」は半角で入力してください。", allow_blank: true }
+validates :delivery_schedule, format: { with: /\A[!-~]+\z/i, :message => "「納期」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
 validates :delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「納品日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
 validates :sub_shop_delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「本社→現場/品物到着日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }
 validates :main_shop_delivery_string, format: { with: /\A[!-~]+\z/i, :message => "「現場→本社/品物到着日」は半角で「2020/01/01」というように入力してください。", allow_blank: true }

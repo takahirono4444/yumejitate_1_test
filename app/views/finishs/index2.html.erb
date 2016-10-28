@@ -1,0 +1,32 @@
+<html>
+
+<p><%= render partial: "title_form" %></p>
+
+<table class="table_design">
+<tr>
+<%= render partial: "finish_column_title" %>
+    </tr>
+
+    <% a_price = 0 %>
+<% @finishs.each do |finish| %>
+ <tr>
+ <td><%= render partial: "finish", locals: {finish: finish} %></td>
+ <%= render partial: "finish_list", locals: {finish: finish} %>
+    </tr>
+
+    <% a_price = a_price + finish.price if finish.price %>
+    <% end %>
+
+
+     
+                <div style="foat: left;">
+                <%= render partial: "finish_find_form" %>
+              </div>
+
+
+
+              <div><%= "合計:#{a_price}" if current_user.id == 1 || 2 || 3 %></div>
+
+</table>
+
+  </html>

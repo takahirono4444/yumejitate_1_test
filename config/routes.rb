@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "products#index"
 
   resources :finishs do
-    collection do
+  collection do
     get 'search1'
       get 'search'
       get 'find'
@@ -16,10 +16,15 @@ Rails.application.routes.draw do
       get 'find6'
       get 'find7'
       get 'find8'
+      get 'index2'
+
 end
 end
 
-resources :pictures
+
+  resources :pictures
+
+
 
  resources :products do
   

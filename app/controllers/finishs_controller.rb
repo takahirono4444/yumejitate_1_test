@@ -4,14 +4,26 @@ class FinishsController < ApplicationController
 
   helper_method :sort_column, :sort_direction#並べ替えのヘルパーメソッドの定義
 
+
   def index
+  @finishs = Finish.page(params[:page]).per(100).order(sort_column + " " + sort_direction)
+  @pictures = @finishs.map(&:pictures).flatten
+
+  respond_to do |format|#csvとエクセルで出力する処理(エンコーディング未処理)
+      format.html
+      format.csv { send_data @finishs.to_csv }
+      format.xls { send_data @finishs.to_csv(col_sep: "\t")}
+      end
+ end
+
+  def index2
     @finishs = Finish.all.order("first_day DESC")
     @pictures = @finishs.map(&:pictures).flatten
 
     respond_to do |format|#csvとエクセルで出力する処理(エンコーディング未処理)
       format.html
-      format.csv { send_data @products.to_csv }
-      format.xls { send_data @products.to_csv(col_sep: "\t")}
+      format.csv { send_data @finishs.to_csv }
+      format.xls { send_data @finishs.to_csv(col_sep: "\t")}
       end
   end
 
