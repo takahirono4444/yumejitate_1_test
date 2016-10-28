@@ -8,20 +8,22 @@
     <% @product.errors.full_messages.each do |err| %>
     <%= err %>
     <% end %>
+    <h3>
+    <INPUT type="button" value="１：登録ページへ戻り修正する" onClick="history.back()">
+    </h3>
+    <h3>
+    <input type="button" value="２：現行一覧へ戻る" onClick="location.href='/'">
+    </h3>
   </li>
       <% else %>
       <li>登録が完了しました</li>
-    </ul>
-  </div>
-<% end %>
-  </h3>
-<h3>
-
-<INPUT type="button" value="２：登録ページへ戻り修正する" onClick="history.back()">
-
-      </h3>
       <h3>
       <a href="/">一覧へ戻る</a>
     </h3>
+    </ul>
+  </div>
+<% end %>
+
+      
     </div>
   </div>
