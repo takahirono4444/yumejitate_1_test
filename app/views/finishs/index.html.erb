@@ -27,7 +27,7 @@
 
               <div>
               <% if current_user.id == (1 || 2 || 3) %>
-              <%= "合計:#{a_price}" %>
+              <div>合計:<%= number_to_currency(a_price,:precision =>0, :format=>"%n%u", :unit=>"円") %></div><!--precisionは小数点。標準だと小数点以下2位まで表示。%nはナンバー、%uがユニット。-->
                 <% end %>
               </div>
 
