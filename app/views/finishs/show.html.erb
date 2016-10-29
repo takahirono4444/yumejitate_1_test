@@ -7,16 +7,7 @@
     </tr>
 
  <tr>
- <td><ul class="more_list">
-        <li>
-          <%= link_to '納品済み記録編集', "/finishs/#{@finish.id}/edit", method: :get %>
-        </li>
-<!--
-        <li>
-          <%= link_to '削除', "/finishs/#{@finish.id}", method: :delete %>
-        </li>-->
-
-      </ul></td>
+ <td><%= render partial: "finish_edit" %></td>
       <td><%= @finish.member_id %></td>
       <td><%= @finish.sagyosyo_id %></td>
       <td><%= @finish.syohin_id %></td>

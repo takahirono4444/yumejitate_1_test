@@ -7,17 +7,7 @@
     </tr>
     
  <tr>
- <td><ul class="more_list">
-        <li>
-          <%= link_to '編集', "/products/#{@product.id}/edit", method: :get %>
-        </li>
-        <p><br></p>
-        <p><br></p>
-        <li>
-          <%= link_to '削除', "/products/#{@product.id}", method: :delete %>
-        </li>
-        
-      </ul></td>
+ <td><%= render partial: "product_edit" %></td>
       <td><%= @product.member_id %></td>
       <td><%= @product.sagyosyo_id %></td>
       <td><%= @product.syohin_id %></td>
