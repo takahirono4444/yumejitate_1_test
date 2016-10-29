@@ -70,8 +70,7 @@ def find8
 def create
   @product = Product.create(product_params)
   @finish = Finish.create(finish_params)
-  @picture = @product
-  @picture = @finish
+
   @picture = Picture.create(pictures_params)
 
   @product.save
@@ -106,8 +105,7 @@ end
 def update
   @product = Product.find(params[:id])
   @finish = Finish.find(params[:id])
-  @picture = @product
-  @picture = @finish
+
   @picture = Picture.create(pictures_params)
 
    @product.update(product_params_2)
