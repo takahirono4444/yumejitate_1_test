@@ -5,7 +5,8 @@
 <tr>
  <%= render partial: "finish_column_title" %>
     </tr>
-
+    
+    <% a_price = 0 %>
 <% @finishs.each do |product| %> 
  <tr>
  <td><%= render partial: "finish", locals: {finish: finish} %></td>
