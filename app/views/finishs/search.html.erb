@@ -7,7 +7,7 @@
     </tr>
     
     <% a_price = 0 %>
-<% @finishs.each do |product| %> 
+<% @finishs.each do |finish| %> 
  <tr>
  <td><%= render partial: "finish", locals: {finish: finish} %></td>
  <%= render partial: "finish_list", locals: {finish: finish} %>
