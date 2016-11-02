@@ -70,12 +70,10 @@ def find8
 def create
   @product = Product.create(product_params)
   @finish = Finish.create(finish_params)
-
   @picture = Picture.create(pictures_params)
 
   @product.save
   @finish.save
-  @picture.save
  #   Product.where(member_id: params[:member_id]).first_or_initialize
     end
 
