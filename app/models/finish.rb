@@ -16,9 +16,9 @@ validates :delivery_schedule, presence: true, format: { with: /\A[!-~]+\z/i, :me
 
 
 #数字のみ
-validates :shitadori, numericality: { only_integer: true, :message => "「下取り」が間違っています。「下取り」数字のみ入力できます。", allow_blank: true }
-validates :price, numericality: { only_integer: true, :message => "「最終金額」が間違っています。「最終金額」数字のみ入力できます。", allow_blank: true }
-validates :uchikin, numericality: { only_integer: true, :message => "「内金」が間違っています。「内金」数字のみ入力できます。", allow_blank: true }
+validates :shitadori, numericality: { only_integer: true, :message => "「下取り」が間違っています。「下取り」数字のみ入力できます。" }
+validates :price, numericality: { only_integer: true, :message => "「最終金額」が間違っています。「最終金額」数字のみ入力できます。" }
+validates :uchikin, numericality: { only_integer: true, :message => "「内金」が間違っています。「内金」数字のみ入力できます。" }
 
 
 #日付
