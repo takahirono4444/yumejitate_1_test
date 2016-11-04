@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102014153) do
+ActiveRecord::Schema.define(version: 20161104072935) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -98,8 +98,6 @@ ActiveRecord::Schema.define(version: 20161102014153) do
     t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "product_id",                           limit: 255
-    t.string  "user_id",                              limit: 255
-    t.string  "edit_staff_id",                        limit: 255
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -197,8 +195,6 @@ ActiveRecord::Schema.define(version: 20161102014153) do
     t.string  "DM_true",                              limit: 255
     t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
-    t.string  "user_id",                              limit: 255
-    t.string  "edit_staff_id",                        limit: 255
   end
 
   create_table "users", force: :cascade do |t|
