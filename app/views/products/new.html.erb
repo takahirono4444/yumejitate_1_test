@@ -300,12 +300,25 @@
 <%= f.text_field :customer_telephone %>
             </div>
 <div class="input_form">
+      <%=f.label :来店の理由 %>
+<%= f.text_area :customer_appearance, size: "40x10" %>
+      </div>
+<div class="input_form">
 <%= f.radio_button :next_expected, "できる" %><%= f.label :"次回の期待ができる方" %>
 <%= f.radio_button :next_expected, "わからない" %><%= f.label :"わからない" %>
       </div>
 <div class="input_form">
-      <%=f.label :来店の理由 %>
-<%= f.text_area :visit_reason, size: "40x10" %>
+      <%=f.label :来店のきっかけ %>
+<%= f.radio_button :visit_reason, "ネット" %><%= f.label :"ネット" %>
+<%= f.radio_button :visit_reason, "チラシ" %><%= f.label :"チラシ" %>
+<%= f.radio_button :visit_reason, "通りがかり" %><%= f.label :"通りがかり" %>
+<%= f.radio_button :visit_reason, "店内案内" %><%= f.label :"店内案内" %>
+<%= f.radio_button :visit_reason, "リピーター" %><%= f.label :"リピーター" %>
+<%= f.radio_button :visit_reason, "紹介" %><%= f.label :"紹介" %>
+<%= f.radio_button :visit_reason, "TV" %><%= f.label :"TV" %>
+<%= f.radio_button :visit_reason, "ご近所" %><%= f.label :"ご近所" %>
+<%= f.radio_button :visit_reason, "その他" %><%= f.label :"その他" %>
+<%= f.radio_button :visit_reason, "わからない" %><%= f.label :"わからない" %>
       </div>
 <div class="input_form">
       <%= f.label :検索キーワード %>
@@ -397,6 +410,8 @@
       </div>
 
             <%= f.submit "登録する", data: { confirm: "登録しますか？"} %>
+            
+
 
 
 

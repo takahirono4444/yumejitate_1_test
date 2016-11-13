@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104073728) do
+ActiveRecord::Schema.define(version: 20161113084055) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20161104073728) do
     t.string  "adress1",                              limit: 255
     t.string  "adress2",                              limit: 255
     t.string  "free_space1",                          limit: 255
-    t.string  "delete_box",                           limit: 255
     t.string  "shop",                                 limit: 255
     t.string  "delivery_schedule",                    limit: 255
     t.string  "delivery_string",                      limit: 255
@@ -90,12 +89,6 @@ ActiveRecord::Schema.define(version: 20161104073728) do
     t.string  "customer_email",                       limit: 255
     t.string  "sex",                                  limit: 255
     t.string  "age",                                  limit: 255
-    t.string  "registration_string",                  limit: 255
-    t.string  "upstring_string",                      limit: 255
-    t.string  "registration_no",                      limit: 255
-    t.string  "history_number",                       limit: 255
-    t.string  "DM_true",                              limit: 255
-    t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "product_id",                           limit: 255
     t.string  "user_id",                              limit: 255, default: "0", null: false
@@ -127,7 +120,6 @@ ActiveRecord::Schema.define(version: 20161104073728) do
     t.string  "adress1",                              limit: 255
     t.string  "adress2",                              limit: 255
     t.string  "free_space1",                          limit: 255
-    t.string  "delete_box",                           limit: 255
     t.string  "shop",                                 limit: 255
     t.string  "delivery_schedule",                    limit: 255
     t.string  "delivery_string",                      limit: 255
@@ -190,12 +182,6 @@ ActiveRecord::Schema.define(version: 20161104073728) do
     t.string  "customer_email",                       limit: 255
     t.string  "sex",                                  limit: 255
     t.string  "age",                                  limit: 255
-    t.string  "registration_string",                  limit: 255
-    t.string  "upstring_string",                      limit: 255
-    t.string  "registration_no",                      limit: 255
-    t.string  "history_number",                       limit: 255
-    t.string  "DM_true",                              limit: 255
-    t.string  "last_response_string",                 limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "user_id",                              limit: 255, default: "0", null: false
     t.string  "edit_staff_id",                        limit: 255, default: "0", null: false
