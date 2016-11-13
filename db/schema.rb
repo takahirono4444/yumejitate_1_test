@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113084055) do
+ActiveRecord::Schema.define(version: 20161113091648) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -71,23 +71,14 @@ ActiveRecord::Schema.define(version: 20161113084055) do
     t.string  "customer_name",                        limit: 255
     t.string  "customer_adress",                      limit: 255
     t.string  "customer_telephone",                   limit: 255
-    t.string  "customer_appearance",                  limit: 255
-    t.string  "next_expected",                        limit: 255
     t.string  "visit_reason",                         limit: 255
     t.string  "search_keywords",                      limit: 255
     t.string  "show_string_hp",                       limit: 255
-    t.string  "browser",                              limit: 255
-    t.string  "terminal_kind",                        limit: 255
     t.string  "hp_impression",                        limit: 255
-    t.string  "sample_price",                         limit: 255
-    t.string  "sample_design",                        limit: 255
     t.string  "reason_of_yumejitate",                 limit: 255
     t.string  "bad_impression_hp",                    limit: 255
     t.string  "want_jewelry",                         limit: 255
-    t.string  "publish_true",                         limit: 255
-    t.string  "contact_true",                         limit: 255
     t.string  "customer_email",                       limit: 255
-    t.string  "sex",                                  limit: 255
     t.string  "age",                                  limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "product_id",                           limit: 255
@@ -164,23 +155,14 @@ ActiveRecord::Schema.define(version: 20161113084055) do
     t.string  "customer_name",                        limit: 255
     t.string  "customer_adress",                      limit: 255
     t.string  "customer_telephone",                   limit: 255
-    t.string  "customer_appearance",                  limit: 255
-    t.string  "next_expected",                        limit: 255
     t.string  "visit_reason",                         limit: 255
     t.string  "search_keywords",                      limit: 255
     t.string  "show_string_hp",                       limit: 255
-    t.string  "browser",                              limit: 255
-    t.string  "terminal_kind",                        limit: 255
     t.string  "hp_impression",                        limit: 255
-    t.string  "sample_price",                         limit: 255
-    t.string  "sample_design",                        limit: 255
     t.string  "reason_of_yumejitate",                 limit: 255
     t.string  "bad_impression_hp",                    limit: 255
     t.string  "want_jewelry",                         limit: 255
-    t.string  "publish_true",                         limit: 255
-    t.string  "contact_true",                         limit: 255
     t.string  "customer_email",                       limit: 255
-    t.string  "sex",                                  limit: 255
     t.string  "age",                                  limit: 255
     t.string  "agelast_user_id",                      limit: 255
     t.string  "user_id",                              limit: 255, default: "0", null: false
