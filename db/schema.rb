@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113094115) do
+ActiveRecord::Schema.define(version: 20161113094348) do
 
   create_table "finishes", force: :cascade do |t|
     t.string  "member_id",                            limit: 255
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20161113094115) do
     t.string  "search_keywords",                      limit: 255
     t.string  "show_string_hp",                       limit: 255
     t.string  "browser",                              limit: 255, default: "0", null: false
+    t.string  "terminal_kind",                        limit: 255, default: "0", null: false
     t.string  "hp_impression",                        limit: 255
     t.string  "reason_of_yumejitate",                 limit: 255
     t.string  "bad_impression_hp",                    limit: 255
@@ -164,6 +165,7 @@ ActiveRecord::Schema.define(version: 20161113094115) do
     t.string  "search_keywords",                      limit: 255
     t.string  "show_string_hp",                       limit: 255
     t.string  "browser",                              limit: 255, default: "0", null: false
+    t.string  "terminal_kind",                        limit: 255, default: "0", null: false
     t.string  "hp_impression",                        limit: 255
     t.string  "reason_of_yumejitate",                 limit: 255
     t.string  "bad_impression_hp",                    limit: 255
