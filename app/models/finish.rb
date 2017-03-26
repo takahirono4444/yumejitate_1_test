@@ -8,7 +8,7 @@ class Finish < ActiveRecord::Base
 
 
 #必須項目
-validates :member_id, presence: {:message => "「会員番号」は必須入力項目です。"}
+validates :member_id, presence: true, format: { with: /\A[!-~]+\z/i, :message => "「会員番号」は必須入力項目です。「会員番号」は半角で入力してください。 "}
 validates :name, presence: {:message => "「名前」が入力されていません。「名前」は必須入力項目です"}
 validates :first_day, presence: true, format: { with: /\A[!-~]+\z/i, :message => "「受注日」は必須入力項目です。「受注日」は半角で「2020/01/01」というように入力してください。"  }
 validates :shop, presence: {:message => "「受注場所」が入力されていません。「受注場所」は必須入力項目です"}
