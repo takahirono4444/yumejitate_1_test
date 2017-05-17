@@ -55,6 +55,7 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
   gem 'thin'
+  gem 'unicorn'
 end
 
 
