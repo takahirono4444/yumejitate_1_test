@@ -1,10 +1,9 @@
-<div>
+<div class="input">
         <h3>
         登録する
       </h3>
       <%= form_for(@finish, html: { method: :put }) do |f| %>
 
-      
 
 <div class="input_form_red">
       <%= f.label :"必ず半角で入力すること!" %>
@@ -413,6 +412,8 @@
       </div>
 
             <%= f.submit "更新する", data: { confirm: "更新しますか？"} %>
+
+
 
      
 
