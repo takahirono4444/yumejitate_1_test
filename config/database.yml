@@ -51,4 +51,6 @@ production:
   <<: *default
   database: yumejitate_1_production
   username: yumejitate_1
-  password: <%= ENV['YUMEJITATE0_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /tmp/mysql.sock
+
